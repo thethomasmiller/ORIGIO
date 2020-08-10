@@ -20,6 +20,7 @@ The **ORIGIO** MVP will allow users to create an account, see all ideas, add a n
 - A user can change the Idea
 - A user can add Collaborators
 - A user can change Collaborators
+- A user can logout and keep the contents of their account.
 
 
 <br>
