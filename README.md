@@ -98,7 +98,7 @@ src
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
 |  APP  | class |   y   |   n   | _Storage for Routes and State._|
-|    Landing    | functional |   n   |   n   | _The Landing will welcome the user and provide a link to Login, Register, and About.              |
+|    Landing    | functional |   n   |   n   | _The Landing will welcome the user and provide a link to Login, Register, and About._              |
 |  Register  | class |   n   |   n   | _Register will allow a user to create an account._|
 |   Login    |   class    |   n   |   n   | _Login will allow a user to login to their account._|
 | UserHome| class |   n   |   y   | _User Home will render all ideas, along with a personal greeting and options to Add an Idea and logout._                 |
