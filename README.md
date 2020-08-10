@@ -117,7 +117,7 @@ src
 | Ideas |    H     |     5 hrs      |     X hrs     |     X hrs     |
 | Collaborators |    H     |     5 hrs      |     X hrs     |     X hrs     |
 | Build Backend |    H     |     5 hrs      |     X hrs     |     X hrs     |
-| Styling |    H     |     8 hrs      |     X hrs     |     X hrs     |
+| Styling/Media Queries |    H     |     8 hrs      |     X hrs     |     X hrs     |
 | Post MVP |    H     |     5 hrs      |     X hrs     |     X hrs     |
 | TOTAL    |          |     40 hrs      |     X hrs     |     X hrs     |
 
