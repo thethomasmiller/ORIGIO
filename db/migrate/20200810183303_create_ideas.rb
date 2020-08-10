@@ -5,6 +5,8 @@ class CreateIdeas < ActiveRecord::Migration[6.0]
       t.string :date
       t.string :notes
       t.string :img_url
+      t.references :user, null: false, foreign_key: true
+
 
       t.timestamps
     end

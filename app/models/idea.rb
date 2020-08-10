@@ -1,4 +1,4 @@
 class Idea < ApplicationRecord
-  belongs_to :users
-  has_many :comments
+  belongs_to :user
+  has_many :comment
 end

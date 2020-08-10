@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-belongs_to :users
-belongs_to :ideas
+belongs_to :user
+belongs_to :idea
 
 end
