@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
  
-  resources :comments, only: :index
+  resources :comments
   resources :ideas
-  resources :users, only: :create
+  resources :users
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
   put '/ideas/:idea_id/comments/:id', to: 'ideas#add_comment'

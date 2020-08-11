@@ -1,5 +1,6 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :update, :destroy]
+  before_action :authorize_request, except: [:index, :show]
 
   # GET /ideas
   def index
@@ -23,6 +24,16 @@ class IdeasController < ApplicationController
       render json: @idea.errors, status: :unprocessable_entity
     end
   end
+
+# PUT /ideas/1/comments/1
+def add_comment
+  @idea = Idea.find(params[:id])
+  @comment = Comment.find(params[:comment_id])
+
+  @idea.comments << @comment
+
+  render json: @idea, include: :comments
+end
 
   # PATCH/PUT /ideas/1
   def update

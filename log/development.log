@@ -1318,3 +1318,332 @@ Processing by CommentsController#index as HTML
 Completed 200 OK in 88ms (Views: 47.5ms | ActiveRecord: 34.2ms | Allocations: 5640)
 
 
+Started GET "/users" for ::1 at 2020-08-10 16:28:57 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/thomasmiller/General_Assembly/sei/constellations/unit_4/origio/ORIGIO/app/controllers/users_controller.rb:11: unknown regexp option - r):
+  
+app/controllers/users_controller.rb:11: unknown regexp option - r
+app/controllers/users_controller.rb:11: unknown regexp option - r
+Started GET "/users/1" for ::1 at 2020-08-10 16:29:47 -0400
+  
+SyntaxError (/Users/thomasmiller/General_Assembly/sei/constellations/unit_4/origio/ORIGIO/app/controllers/users_controller.rb:11: unknown regexp option - r):
+  
+app/controllers/users_controller.rb:11: unknown regexp option - r
+app/controllers/users_controller.rb:11: unknown regexp option - r
+Started GET "/users" for ::1 at 2020-08-10 16:30:27 -0400
+  
+SyntaxError (/Users/thomasmiller/General_Assembly/sei/constellations/unit_4/origio/ORIGIO/app/controllers/users_controller.rb:11: unknown regexp option - r):
+  
+app/controllers/users_controller.rb:11: unknown regexp option - r
+app/controllers/users_controller.rb:11: unknown regexp option - r
+Started GET "/users" for ::1 at 2020-08-10 16:30:43 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 14.3ms | ActiveRecord: 16.5ms | Allocations: 8421)
+
+
+Started GET "/users" for ::1 at 2020-08-11 14:35:56 -0400
+Processing by UsersController#index as */*
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Started POST "/users/" for ::1 at 2020-08-11 14:43:06 -0400
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 206ms (ActiveRecord: 0.0ms | Allocations: 3132)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:54:in `user_params'
+app/controllers/users_controller.rb:19:in `create'
+Started POST "/users/" for ::1 at 2020-08-11 14:44:03 -0400
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 9ms (ActiveRecord: 0.0ms | Allocations: 122)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:54:in `user_params'
+app/controllers/users_controller.rb:19:in `create'
+Started POST "/users/" for ::1 at 2020-08-11 14:44:38 -0400
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms | Allocations: 124)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:54:in `user_params'
+app/controllers/users_controller.rb:19:in `create'
+Started POST "/users/" for ::1 at 2020-08-11 14:46:37 -0400
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 10ms (ActiveRecord: 0.0ms | Allocations: 123)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:54:in `user_params'
+app/controllers/users_controller.rb:19:in `create'
+Started POST "/users/" for ::1 at 2020-08-11 14:47:34 -0400
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms | Allocations: 122)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:54:in `user_params'
+app/controllers/users_controller.rb:19:in `create'
+Started POST "/users/" for ::1 at 2020-08-11 14:52:28 -0400
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 15ms (ActiveRecord: 0.0ms | Allocations: 1963)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:54:in `user_params'
+app/controllers/users_controller.rb:19:in `create'
+Started POST "/users/" for ::1 at 2020-08-11 14:55:06 -0400
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms | Allocations: 110)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:54:in `user_params'
+app/controllers/users_controller.rb:19:in `create'
+Started POST "/user/" for ::1 at 2020-08-11 14:55:16 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/user"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-08-11 14:55:29 -0400
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 9ms (ActiveRecord: 0.0ms | Allocations: 110)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:54:in `user_params'
+app/controllers/users_controller.rb:19:in `create'
+Started GET "/users" for ::1 at 2020-08-11 15:00:53 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-08-11 15:01:04 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-08-11 15:01:20 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/" for ::1 at 2020-08-11 15:01:27 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users/" for ::1 at 2020-08-11 15:01:54 -0400
+Processing by UsersController#create as */*
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms | Allocations: 110)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:54:in `user_params'
+app/controllers/users_controller.rb:19:in `create'
