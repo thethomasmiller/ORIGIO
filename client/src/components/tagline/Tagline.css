@@ -1,0 +1,29 @@
+.tagline{
+  display: flex;
+
+}
+.vertical-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 30px;
+  text-transform: uppercase;
+  height: 500px;
+  margin: auto;
+}
+
+.makers-button{
+  display:flex;
+  
+}
+
+.makers-buttons{
+  display: flex;
+  flex-direction: column;
+
+}
+.makers{
+  font-size: 250px;
+  text-transform: uppercase;
+  margin: auto;
+}
