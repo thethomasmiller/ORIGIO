@@ -8,7 +8,12 @@ export default class Main extends Component {
     const {handleLogin, handleRegister} = this.props
     return (
       <main>
-     
+        <Route path='/login' render={(props) =>
+          <Login
+            {...props}
+            handleLogin={handleLogin}
+          /> } 
+     />
       </main>
     )
   }
