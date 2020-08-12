@@ -1,29 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import AccountHome from './AccountHome'
+import ShowIdeas from './ShowIdeas'
 
 export default function UserHeader(props) {
   const { currentUser, handleLogout } = props;
   return (
-    <header>
+    <div>
 
 
       {currentUser ? (
         <>
-          <p>{currentUser.username}</p>
+          <p>Hello, {currentUser.name}</p>
           <button onClick={handleLogout}>Logout</button>
         </>
       ) : (
-          null
+          <Link to='/login'>Login/Register</Link>
         )
       }
       
       {currentUser && (
         <>
-          <Link to='/foods'>Foods</Link>
-          <Link to='/flavors'>Flavors</Link>
-          <hr />
         </>
       )}
-    </header >
+    </div >
   )
 }

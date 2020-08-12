@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
+import Header from './components/header/Header'
 import Main from './components/main/Main'
 import UserHeader from './components/UserHeader'
 import { withRouter } from 'react-router-dom'
@@ -34,13 +35,14 @@ class App extends Component {
   }
 
   handleVerify = async () => {
-    const currentUser = await verifyUser();
+    const currentUser = await verifyUser()
     this.setState({ currentUser })
   }
 
   render() {
     return (
       <div>
+        <Header/>
         <UserHeader
           currentUser={this.state.currentUser}
           handleLogout={this.handleLogout} />

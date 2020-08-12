@@ -5,12 +5,12 @@ export const createIdea = async (ideaData) => {
   return resp.data
 }
 
-export const readAllIdeas = async () => {
+export const getAllIdeas = async () => {
   const resp = await api.get('/ideas')
   return resp.data
 }
 
-export const readOneIdea = async (id) => {
+export const getOneIdea = async (id) => {
   const resp = await api.get(`/ideas/${id}`);
   return resp.data
 }
