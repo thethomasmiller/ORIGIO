@@ -16,15 +16,35 @@ export default class Login extends Component {
     })
   }
 
-  
-  render() {
-    return (
-      <div>
-        <Header />
-        
 
-        <Footer/>
-      </div>
-    )
+  render() {
+    const { username, password } = this.state
+    const { handleLogin, history } = this.props
+    
+    return (
+      <>
+      <Header />
+        <form onSubmit={(e) => {
+          e.preventDefault();
+          handleLogin(this.state)
+          history.push('/')
+      }}>
+          <h3>Login</h3>
+          <label>
+            Username:
+            <input
+              type='text'
+              name='username'
+              value={username}
+              onChange = {this.handleChange}
+            />
+          </label>
+          <label>
+          <input />
+          </label>
+            <button>Submit</button>
+      </form>
+      <Footer/>
+   </> )
   }
 }
