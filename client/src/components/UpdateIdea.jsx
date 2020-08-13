@@ -21,6 +21,8 @@ export default class UpdateIdea extends Component {
     this.setState({
       title: this.props.ideaItem.title,
       date: this.props.ideaItem.date,
+      notes: this.props.ideaItem.date,
+      img_url: this.props.ideaItem.img_url
 
     })
   }
