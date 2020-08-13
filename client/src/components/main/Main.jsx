@@ -8,6 +8,7 @@ import ShowIdeas from '../ShowIdeas'
 import IdeaItem from '../IdeaItem'
 import Landing from '../Landing'
 import CreateIdea from '../CreateIdea'
+import UpdateIdea from '../UpdateIdea'
 
 
 
@@ -33,7 +34,9 @@ export default class Main extends Component {
 
   handleIdeaUpdate = async (id, ideaData) => {
     const newIdea = await updateIdea(id, ideaData)
-    this.set
+    this.setState(prevState => ({
+      ideas: prevState.ideas.map(idea=>idea.id === parseInt(id)? newIdea : idea)
+    }))
   }
 
   render() {
@@ -70,7 +73,7 @@ export default class Main extends Component {
         )} />
 
 
-        <Route path='/ideas/:id' render={(props) => {
+        <Route exact path='/ideas/:id' render={(props) => {
           const { id } = props.match.params;
           return <IdeaItem
             id={id}
@@ -78,7 +81,17 @@ export default class Main extends Component {
           />
         }} />
 
-
+        <Route exact path='/ideas/:id/edit' render={(props) => {
+          const { id } = props.match.params
+          const ideaItem = this.state.ideas.find(idea => idea.id === parseInt(id))
+          return <UpdateIdea
+            {...props}
+            handleIdeaUpdate={this.handleIdeaUpdate}
+            ideaItem={ideaItem}
+            id={id}
+          />
+        }} />
+          
 
       </main>
     )

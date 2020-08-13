@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 
 export default class UpdateIdea extends Component {
+  
   state = {
-    name: ''
-  }
+    title: '',
+    date: '',
+    notes: '',
+    img_url: ''
+  } 
 
   componentDidMount() {
     if (this.props.ideaItem) {
@@ -34,10 +38,11 @@ export default class UpdateIdea extends Component {
     })
   }
   render() {
+    const {handleIdeaUpdate, history, id} = this.props
     return (
       <form onSubmit={(e) => {
         e.preventDefault();
-        handleIdeaCreate(this.state)
+        handleIdeaUpdate(id, this.state)
         history.push(`/accounthome`)
       }}>
         <h3>Make Idea</h3>
