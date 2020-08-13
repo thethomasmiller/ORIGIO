@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 
 import Login from '../Login'
 import Register from '../Register'
-import { getAllIdeas, createIdea } from '../../services/ideas'
+import { getAllIdeas, createIdea, updateIdea } from '../../services/ideas'
 import ShowIdeas from '../ShowIdeas'
 import IdeaItem from '../IdeaItem'
 import Landing from '../Landing'
@@ -29,6 +29,11 @@ export default class Main extends Component {
     this.setState(prevState => ({
       ideas: [...prevState.ideas, newIdea]
     }))
+  }
+
+  handleIdeaUpdate = async (id, ideaData) => {
+    const newIdea = await updateIdea(id, ideaData)
+    this.set
   }
 
   render() {
