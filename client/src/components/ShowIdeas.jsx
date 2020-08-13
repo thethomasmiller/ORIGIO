@@ -14,7 +14,7 @@ export default function ShowIdeas(props) {
        </div>
       ))}
       <br />
-      <Link to="/idea/new"><button>Create Idea</button></Link>
+      <Link to="/ideas/new"><button>Create Idea</button></Link>
     </div>
   )
 }

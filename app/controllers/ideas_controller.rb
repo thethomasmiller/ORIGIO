@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :update, :destroy]
-  before_action :authorize_request, except: [:index, :show]
+  before_action :authorize_request, only: [:create, :update, :destroy, :add_comment]
 
   # GET /ideas
   def index
@@ -17,6 +17,7 @@ class IdeasController < ApplicationController
   # POST /ideas
   def create
     @idea = Idea.new(idea_params)
+    @idea.user = @current_user
 
     if @idea.save
       render json: @idea, status: :created, location: @idea

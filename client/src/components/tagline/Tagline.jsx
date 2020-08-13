@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './Tagline.css'
 
 export default function Tagline() {
@@ -21,13 +22,13 @@ export default function Tagline() {
           </div>
 
         </div>
-        <div className = "makers-buttons">
+        <div className="makers-buttons">
           <div className="makers">
             <div>makers</div>
           </div>
-          <div classname = "buttons">
-            <button>start making</button>
-            <button>keep making</button>
+          <div classname="buttons">
+            <Link to= '/register'><button>start making</button></Link>
+            <Link to= '/login'><button>keep making</button></Link>
           </div>
         </div>
       </div>
