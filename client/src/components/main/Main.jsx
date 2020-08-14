@@ -29,6 +29,13 @@ export default class Main extends Component {
     const ideas = await getAllIdeas()
     this.setState({ ideas })
   }
+
+  fetchComments = async () => {
+    const comments = await getAllComments()
+    this.setState({ comments })
+  }
+
+
   handleIdeaCreate = async (ideaData) => {
     const newIdea = await createIdea(ideaData);
     this.setState(prevState => ({
@@ -50,10 +57,7 @@ export default class Main extends Component {
     }))
   }
 
-  fetchComments = async () => {
-    const comments = await getAllComments()
-    this.setState({comments})
-  }
+  
 
 
   render() {
