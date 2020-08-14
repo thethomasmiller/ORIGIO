@@ -12293,3 +12293,216 @@ Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 3.4ms | Allocations: 1685
 Completed 200 OK in 122ms (Views: 16.3ms | ActiveRecord: 100.2ms | Allocations: 6186)
 
 
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (452.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ORIGIO_development"[0m
+  [1m[35m (361.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ORIGIO_test"[0m
+  [1m[35m (925.5ms)[0m  [1m[35mCREATE DATABASE "ORIGIO_development" ENCODING = 'unicode'[0m
+  [1m[35m (632.4ms)[0m  [1m[35mCREATE DATABASE "ORIGIO_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (36.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "body" character varying, "user_id" bigint NOT NULL, "idea_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_idea_id" ON "comments"  ("idea_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_user_id" ON "comments"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "ideas" CASCADE[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "ideas" ("id" bigserial primary key, "title" character varying, "date" character varying, "notes" character varying, "img_url" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_ideas_on_user_id" ON "ideas"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "username" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (45.8ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_7fbb3b1416"
+FOREIGN KEY ("idea_id")
+  REFERENCES "ideas" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "ideas" ADD CONSTRAINT "fk_rails_e4e812f218"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (38.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200810183420)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200810180816),
+(20200810183303);
+
+[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (27.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-14 19:07:16.260422"], ["updated_at", "2020-08-14 19:07:16.260422"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c2c0ed77988bf6968f603e9a2129e3e286d56cce"], ["created_at", "2020-08-14 19:07:16.309492"], ["updated_at", "2020-08-14 19:07:16.309492"]]
+  [1m[35m (41.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (23.2ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "body" character varying, "user_id" bigint NOT NULL, "idea_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_idea_id" ON "comments"  ("idea_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_user_id" ON "comments"  ("user_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "ideas" CASCADE[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "ideas" ("id" bigserial primary key, "title" character varying, "date" character varying, "notes" character varying, "img_url" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE  INDEX  "index_ideas_on_user_id" ON "ideas"  ("user_id")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "username" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (15.8ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_7fbb3b1416"
+FOREIGN KEY ("idea_id")
+  REFERENCES "ideas" ("id")
+[0m
+  [1m[35m (6.1ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "ideas" ADD CONSTRAINT "fk_rails_e4e812f218"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200810183420)[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200810180816),
+(20200810183303);
+
+[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-14 19:07:16.725818"], ["updated_at", "2020-08-14 19:07:16.725818"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-14 19:07:16.735792"], ["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c2c0ed77988bf6968f603e9a2129e3e286d56cce"], ["created_at", "2020-08-14 19:07:16.744614"], ["updated_at", "2020-08-14 19:07:16.744614"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mIdea Load (0.8ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Thomas"], ["email", "admin@email.com"], ["username", "admin"], ["password_digest", "$2a$12$DEwSxAkgsTb9a3gQNYZmIe93r8vj8h5wXFM6bpcjIYuxg2.kBjNU."], ["created_at", "2020-08-14 19:07:17.320894"], ["updated_at", "2020-08-14 19:07:17.320894"]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIdea Create (42.2ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "date", "notes", "img_url", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "New Idea"], ["date", "8/10/2020"], ["notes", "This is a new idea."], ["img_url", "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"], ["user_id", 1], ["created_at", "2020-08-14 19:07:17.389340"], ["updated_at", "2020-08-14 19:07:17.389340"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIdea Create (0.6ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "date", "notes", "img_url", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Second Idea"], ["date", "8/11/2020"], ["notes", "This is a another idea."], ["img_url", "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"], ["user_id", 1], ["created_at", "2020-08-14 19:07:17.442398"], ["updated_at", "2020-08-14 19:07:17.442398"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIdea Create (0.9ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "date", "notes", "img_url", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Third Idea"], ["date", "8/12/2020"], ["notes", "This is a third idea."], ["img_url", "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"], ["user_id", 1], ["created_at", "2020-08-14 19:07:17.453621"], ["updated_at", "2020-08-14 19:07:17.453621"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "ideas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Create (1.2ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Great idea!"], ["user_id", 1], ["idea_id", 1], ["created_at", "2020-08-14 19:07:17.484933"], ["updated_at", "2020-08-14 19:07:17.484933"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Excellent idea!"], ["user_id", 1], ["idea_id", 2], ["created_at", "2020-08-14 19:07:17.508391"], ["updated_at", "2020-08-14 19:07:17.508391"]]
+  [1m[35m (38.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIdea Load (0.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mComment Create (1.1ms)[0m  [1m[32mINSERT INTO "comments" ("body", "user_id", "idea_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["body", "Needs work!"], ["user_id", 1], ["idea_id", 3], ["created_at", "2020-08-14 19:07:17.564222"], ["updated_at", "2020-08-14 19:07:17.564222"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+Started GET "/ideas" for ::1 at 2020-08-14 15:11:04 -0400
+Started GET "/ideas/:id/comments" for ::1 at 2020-08-14 15:11:04 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-14 15:11:04 -0400
+  [1m[35m (11.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommentsController#index as HTML
+  [1m[35m (38.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  Parameters: {"idea_id"=>":id"}
+Processing by AuthenticationController#verify as HTML
+  [1m[35m (29.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IdeasController#index as HTML
+  [1m[36mComment Load (44.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+  [1m[36mIdea Load (7.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 123ms (Views: 69.6ms | ActiveRecord: 36.3ms | Allocations: 10250)
+
+
+Completed 200 OK in 286ms (Views: 186.9ms | ActiveRecord: 78.3ms | Allocations: 19498)
+
+
+  [1m[36mUser Load (26.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 354ms (Views: 2.0ms | ActiveRecord: 210.6ms | Allocations: 23427)
+
+
+Started POST "/auth/login" for ::1 at 2020-08-14 15:11:14 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 458ms (Views: 0.5ms | ActiveRecord: 1.0ms | Allocations: 1166)
+
+
+Started GET "/ideas/1" for ::1 at 2020-08-14 15:11:17 -0400
+Started GET "/ideas/:id/comments" for ::1 at 2020-08-14 15:11:17 -0400
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"1"}
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>":id"}
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+  [1m[36mIdea Load (2.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 2.1ms | Allocations: 1265)
+
+
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 2.3ms | Allocations: 2606)
+
+
+Started GET "/ideas/:id/comments" for ::1 at 2020-08-14 15:11:21 -0400
+Started GET "/ideas/2" for ::1 at 2020-08-14 15:11:21 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>":id"}
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mComment Load (4.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+  [1m[36mIdea Load (3.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 4.7ms | Allocations: 1684)
+
+
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 200 OK in 14ms (Views: 0.8ms | ActiveRecord: 4.0ms | Allocations: 2143)
+
+
+Started GET "/ideas/:id/comments" for ::1 at 2020-08-14 15:11:24 -0400
+Started GET "/ideas/3" for ::1 at 2020-08-14 15:11:24 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>":id"}
+  [1m[36mComment Load (4.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 4.3ms | Allocations: 1520)
+
+
+  [1m[36mIdea Load (1.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.6ms | Allocations: 1063)
+
+
