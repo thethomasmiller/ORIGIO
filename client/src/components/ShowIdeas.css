@@ -1,0 +1,31 @@
+.show-ideas{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.idea-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+ 
+}
+
+.idea-gallery {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.img {
+  width: 150px;
+  height: 150px;
+}
+
+.create-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
