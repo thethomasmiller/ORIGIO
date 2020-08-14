@@ -100,10 +100,8 @@ export default class Main extends Component {
             id={id}
             ideas={this.state.ideas}
             handleIdeaDelete={this.handleIdeaDelete}
-           
+            comments={this.state.comments}
           />
-            <ShowComments
-             comments={this.state.comments} />
           </>
         }} />
 

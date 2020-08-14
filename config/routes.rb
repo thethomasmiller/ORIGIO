@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
  
-  resources :comments
-  resources :ideas
+  resources :ideas do
+    resources :comments
+  end
   resources :users
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'

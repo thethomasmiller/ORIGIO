@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { getOneIdea } from '../services/ideas'
 import { withRouter, Link, Redirect } from 'react-router-dom'
+import ShowComments from './ShowComments'
+import { getAllComments } from '../services/comments'
 
 
 
@@ -10,10 +12,12 @@ class IdeaItem extends Component {
   }
   state = {
     idea: null,
+    comments: null,
   }
 
   componentDidMount() {
     this.fetchIdeaItem()
+    this.fetchComments()
   }
 
   fetchIdeaItem = async () => {
@@ -21,10 +25,13 @@ class IdeaItem extends Component {
     this.setState({ idea })
   }
 
+  fetchComments = async () => {
+   const comment = await getAllComments(this.props.id === this.props.idea_id)
+ }
 
   render() {
-    const { idea } = this.state
-    const { handleIdeaDelete, history } = this.props
+    const { idea, comments } = this.state
+    const { handleIdeaDelete, history} = this.props
     return (
       <div>
         {idea && (
@@ -38,7 +45,20 @@ class IdeaItem extends Component {
               handleIdeaDelete(idea.id)
               history.push('/accounthome')
             }}>Delete</button>
+
+
+            {/* <ShowComments comments={comments}/> */}
+
           </>
+        )}
+
+        {comments && (
+          <>
+            <h3>{comments.body}</h3>
+          
+          
+          </>
+
         )}
 
       </div>
