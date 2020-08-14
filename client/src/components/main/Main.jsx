@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 
 import Login from '../Login'
 import Register from '../Register'
-import { getAllIdeas, createIdea, updateIdea } from '../../services/ideas'
+import { getAllIdeas, createIdea, updateIdea, deleteIdea } from '../../services/ideas'
 import ShowIdeas from '../ShowIdeas'
 import IdeaItem from '../IdeaItem'
 import Landing from '../Landing'
@@ -36,6 +36,13 @@ export default class Main extends Component {
     const newIdea = await updateIdea(id, ideaData)
     this.setState(prevState => ({
       ideas: prevState.ideas.map(idea=>idea.id === parseInt(id)? newIdea : idea)
+    }))
+  }
+
+  handleIdeaDelete = async (id) => {
+    await deleteIdea(id)
+    this.setState(prevState => ({
+      ideas: prevState.ideas.filter(idea => idea.id !==id)
     }))
   }
 
@@ -78,6 +85,7 @@ export default class Main extends Component {
           return <IdeaItem
             id={id}
             ideas={this.state.ideas}
+            handleIdeaDelete={this.handleIdeaDelete}
           />
         }} />
 
@@ -87,6 +95,7 @@ export default class Main extends Component {
           return <UpdateIdea
             {...props}
             handleIdeaUpdate={this.handleIdeaUpdate}
+            
             ideaItem={ideaItem}
             id={id}
           />

@@ -31,7 +31,7 @@ class App extends Component {
     })
     localStorage.removeItem('authToken')
     removeToken();
-    this.props.history.push('/')
+    this.props.history.push('/home')
   }
 
   handleVerify = async () => {

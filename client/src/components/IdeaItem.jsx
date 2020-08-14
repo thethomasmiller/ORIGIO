@@ -23,6 +23,7 @@ export default class IdeaItem extends Component {
 
   render() {
     const { idea } = this.state
+    const {handleIdeaDelete, history} = this.props
     return (
       <div>
         {idea && (
@@ -31,7 +32,10 @@ export default class IdeaItem extends Component {
             <h4>{idea.date}</h4>
             <h4>{idea.notes}</h4>
             <Link to={`/ideas/${idea.id}/edit`}><button>Edit</button></Link>
-          <button onClick={() => this.props.handleIdeaDelete(idea.id)}>Delete</button> 
+            <button onClick={(e) => {
+              handleIdeaDelete(idea.id)
+              history.goBack()
+            }}>Delete</button> 
            </> 
         )}
         

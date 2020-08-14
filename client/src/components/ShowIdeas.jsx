@@ -6,19 +6,20 @@ import './ShowIdeas.css'
 
 export default function ShowIdeas(props) {
   return (
-    <div>
-      <h3>Ideas</h3>
+    <div className = 'show-ideas'>
+    
+      <h3 className = 'Idea-title'>Ideas</h3>
+     <div className='idea-gallery'>
       {props.ideas.map(idea => (
-        <div key={idea.id}>
+        <React.Fragment key={idea.id}>
           <Link to={`/ideas/${idea.id}`}>
             <img src={idea.img_url} className = 'img'/>
             <p>{idea.title}</p>
           </Link>
-          
-       </div>
-      ))}
-      <br />
-      <Link to="/ideas/new"><button>Create Idea</button></Link>
+       </React.Fragment>
+      ))} </div>
+    
+      <Link to="/ideas/new" ><button className = 'create-button' >Create Idea</button></Link>
     </div>
   )
 }

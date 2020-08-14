@@ -20,7 +20,7 @@ export const updateIdea = async (id, ideaData) => {
   return resp.data
 }
 
-export const destroyIdea = async (id) => {
+export const deleteIdea = async (id) => {
   const resp = await api.delete(`/ideas/${id}`)
   return resp
 }
