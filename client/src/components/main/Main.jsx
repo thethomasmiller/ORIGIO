@@ -4,21 +4,25 @@ import { Route } from 'react-router-dom'
 import Login from '../Login'
 import Register from '../Register'
 import { getAllIdeas, createIdea, updateIdea, deleteIdea } from '../../services/ideas'
+import {getAllComments} from '../../services/comments'
 import ShowIdeas from '../ShowIdeas'
 import IdeaItem from '../IdeaItem'
 import Landing from '../Landing'
 import CreateIdea from '../CreateIdea'
 import UpdateIdea from '../UpdateIdea'
+import ShowComments from '../ShowComments'
 
 
 
 export default class Main extends Component {
   state = {
-    ideas: []
+    ideas: [],
+    comments: []
   }
 
   componentDidMount() {
     this.fetchIdeas()
+    this.fetchComments()
   }
 
   fetchIdeas = async () => {
@@ -45,6 +49,12 @@ export default class Main extends Component {
       ideas: prevState.ideas.filter(idea => idea.id !==id)
     }))
   }
+
+  fetchComments = async () => {
+    const comments = await getAllComments()
+    this.setState({comments})
+  }
+
 
   render() {
     const { handleLogin, handleRegister } = this.props
@@ -82,11 +92,15 @@ export default class Main extends Component {
 
         <Route exact path='/ideas/:id' render={(props) => {
           const { id } = props.match.params;
-          return <IdeaItem
+          return <> <IdeaItem
             id={id}
             ideas={this.state.ideas}
             handleIdeaDelete={this.handleIdeaDelete}
+           
           />
+            <ShowComments
+             comments={this.state.comments} />
+          </>
         }} />
 
         <Route exact path='/ideas/:id/edit' render={(props) => {

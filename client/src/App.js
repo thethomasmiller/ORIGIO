@@ -3,7 +3,7 @@ import { loginUser, registerUser, removeToken, verifyUser } from './services/aut
 import Header from './components/header/Header'
 import Main from './components/main/Main'
 import UserHeader from './components/UserHeader'
-import { withRouter } from 'react-router-dom'
+import { withRouter} from 'react-router-dom'
 
 class App extends Component {
 

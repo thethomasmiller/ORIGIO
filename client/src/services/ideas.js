@@ -25,7 +25,7 @@ export const deleteIdea = async (id) => {
   return resp
 }
 
-export const addComment = async (ideaId, commentId) => {
-  const resp = await api.delete(`/ideas/${ideaId}/comments/${commentId}`)
+export const addComment = async (idea_Id, id) => {
+  const resp = await api.get(`/ideas/${idea_Id}/comments/${id}`)
   return resp.data
 }

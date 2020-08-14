@@ -1,6 +1,6 @@
 import api from './api-helper';
 
-export const readAllComments = async () => {
+export const getAllComments = async () => {
   const resp = await api.get('/comments');
   return resp.data;
 }
