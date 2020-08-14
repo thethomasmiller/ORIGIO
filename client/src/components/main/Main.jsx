@@ -3,14 +3,13 @@ import { Route } from 'react-router-dom'
 
 import Login from '../Login'
 import Register from '../Register'
-import { getAllIdeas, createIdea, updateIdea, deleteIdea } from '../../services/ideas'
+import { getAllIdeas, createIdea, updateIdea, deleteIdea, addComment } from '../../services/ideas'
 import {getAllComments} from '../../services/comments'
 import ShowIdeas from '../ShowIdeas'
 import IdeaItem from '../IdeaItem'
 import Landing from '../Landing'
 import CreateIdea from '../CreateIdea'
 import UpdateIdea from '../UpdateIdea'
-import ShowComments from '../ShowComments'
 
 
 
@@ -42,6 +41,14 @@ export default class Main extends Component {
       ideas: [...prevState.ideas, newIdea]
     }))
   }
+
+  handleCommentCreate = async (commentData) => {
+    const newComment = await addComment(commentData)
+    this.setState(prevState => ({
+      comments: [...prevState.ideas, newComment]
+    }))
+  }
+
 
   handleIdeaUpdate = async (id, ideaData) => {
     const newIdea = await updateIdea(id, ideaData)
@@ -100,6 +107,7 @@ export default class Main extends Component {
             id={id}
             ideas={this.state.ideas}
             handleIdeaDelete={this.handleIdeaDelete}
+            handleCommentCreate={this.handleCommentCreate}
             comments={this.state.comments}
           />
           </>

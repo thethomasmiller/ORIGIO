@@ -13,7 +13,7 @@ export default function ShowIdeas(props) {
       {props.ideas.map(idea => (
         <React.Fragment key={idea.id}>
           <Link to={`/ideas/${idea.id}`}>
-            <img src={idea.img_url} className = 'img'/>
+            <img alt='idea' src={idea.img_url} className = 'img'/>
             <p>{idea.title}</p>
           </Link>
        </React.Fragment>

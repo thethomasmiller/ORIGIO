@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
 import { getOneIdea } from '../services/ideas'
-import { withRouter, Link, Redirect } from 'react-router-dom'
-import ShowComments from './ShowComments'
+import { withRouter, Link } from 'react-router-dom'
 import { getAllComments } from '../services/comments'
-
+import './IdeaItem.css'
 
 
 class IdeaItem extends Component {
-  constructor(props) {
-    super(props)
-  }
+ 
   state = {
     idea: null,
     comments: null,
+    body:'',
   }
 
   componentDidMount() {
@@ -30,11 +28,18 @@ class IdeaItem extends Component {
     this.setState({ comments })
   }
 
+  handleChange = (e) => {
+    const { value } = e.target;
+    this.setState({
+      body: value
+    })
+  }
+
   render() {
     const { idea, comments } = this.state
-    const { handleIdeaDelete, history } = this.props
+    const { handleIdeaDelete, history, handleCommentCreate } = this.props
     return (<>
-      <div>
+      <div className = "idea-item-body">
         {idea && (
           <>
             <h3>{idea.title}</h3>
@@ -51,7 +56,23 @@ class IdeaItem extends Component {
             {comments.filter(comment => comment.idea_id === idea.id).map((comment) =>
               <p key={comment.id}>{comment.body}</p>
             )}
-
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                handleCommentCreate(this.state.body)
+                history.push(`/accounthome`)
+              }}
+            >
+            <label>
+                <input
+                    type='text'
+                    name='body'
+                    value={this.state.body}
+                    onChange={this.handleChange}
+                />
+              </label>
+              <button>Add</button>
+            </form>
           </>
         )}
 
