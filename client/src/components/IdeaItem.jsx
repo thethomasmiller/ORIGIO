@@ -26,13 +26,14 @@ class IdeaItem extends Component {
   }
 
   fetchComments = async () => {
-   const comment = await getAllComments(this.props.id === this.props.idea_id)
- }
+    const comments = await getAllComments(this.props.id)
+    this.setState({ comments })
+  }
 
   render() {
     const { idea, comments } = this.state
-    const { handleIdeaDelete, history} = this.props
-    return (
+    const { handleIdeaDelete, history } = this.props
+    return (<>
       <div>
         {idea && (
           <>
@@ -46,23 +47,17 @@ class IdeaItem extends Component {
               history.push('/accounthome')
             }}>Delete</button>
 
-
-            {/* <ShowComments comments={comments}/> */}
+            <h3>Comments</h3>
+            {comments.filter(comment => comment.idea_id === idea.id).map((comment) =>
+              <p key={comment.id}>{comment.body}</p>
+            )}
 
           </>
         )}
 
-        {comments && (
-          <>
-            <h3>{comments.body}</h3>
-          
-          
-          </>
-
-        )}
 
       </div>
-    )
+    </>)
   }
 }
 export default withRouter(IdeaItem)
