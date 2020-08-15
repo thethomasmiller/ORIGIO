@@ -68,8 +68,8 @@ class IdeaItem extends Component {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                handleCommentCreate(this.state.body, this.state.user_id, this.state.idea_id)
-                history.push(`/ideas/:id`)
+                handleCommentCreate(this.state.idea_id, { body: this.state.body })
+                history.push(`/ideas/${this.state.idea_id}`)
               }}
 
             >

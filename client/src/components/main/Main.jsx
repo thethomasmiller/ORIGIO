@@ -3,8 +3,8 @@ import { Route } from 'react-router-dom'
 
 import Login from '../Login'
 import Register from '../Register'
-import { getAllIdeas, createIdea, updateIdea, deleteIdea, addComment } from '../../services/ideas'
-import {getAllComments} from '../../services/comments'
+import { getAllIdeas, createIdea, updateIdea, deleteIdea } from '../../services/ideas'
+import {getAllComments, addComment} from '../../services/comments'
 import ShowIdeas from '../ShowIdeas'
 import IdeaItem from '../IdeaItem'
 import Landing from '../Landing'
@@ -42,10 +42,10 @@ export default class Main extends Component {
     }))
   }
 
-  handleCommentCreate = async (commentData) => {
-    const newComment = await addComment(commentData)
+  handleCommentCreate = async (id, commentData) => {
+    const newComment = await addComment(id, commentData)
     this.setState(prevState => ({
-      comments: [...prevState.ideas, newComment]
+      comments: [...prevState.comments, newComment]
     }))
   }
 
