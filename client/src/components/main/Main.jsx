@@ -68,7 +68,7 @@ export default class Main extends Component {
 
 
   render() {
-    const { handleLogin, handleRegister } = this.props
+    const { handleLogin, handleRegister, currentUser } = this.props
     return (
       <main>
 
@@ -109,6 +109,7 @@ export default class Main extends Component {
             handleIdeaDelete={this.handleIdeaDelete}
             handleCommentCreate={this.handleCommentCreate}
             comments={this.state.comments}
+            currentUser={currentUser}
           />
           </>
         }} />

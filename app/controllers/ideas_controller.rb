@@ -29,7 +29,7 @@ class IdeasController < ApplicationController
 # PUT /ideas/1/comments/1
 def add_comment
   @idea = Idea.find(params[:id])
-  @comment = Comment.find(params[:comment_id])
+  @comment = Comment.find(params[:id])
 
   @idea.comments << @comment
 

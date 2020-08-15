@@ -10,7 +10,9 @@ class IdeaItem extends Component {
   state = {
     idea: null,
     comments: null,
-    body:'',
+    body: '',
+    idea_id: '',
+    user_id: '',
   }
 
   componentDidMount() {
@@ -20,7 +22,11 @@ class IdeaItem extends Component {
 
   fetchIdeaItem = async () => {
     const idea = await getOneIdea(this.props.id)
-    this.setState({ idea })
+    this.setState({
+      idea: idea,
+      idea_id: idea.id,
+      user_id: idea.user_id
+    })
   }
 
   fetchComments = async () => {
@@ -38,6 +44,7 @@ class IdeaItem extends Component {
   render() {
     const { idea, comments } = this.state
     const { handleIdeaDelete, history, handleCommentCreate } = this.props
+   
     return (<>
       <div className = "idea-item-body">
         {idea && (
@@ -53,15 +60,18 @@ class IdeaItem extends Component {
             }}>Delete</button>
 
             <h3>Comments</h3>
+            
             {comments.filter(comment => comment.idea_id === idea.id).map((comment) =>
               <p key={comment.id}>{comment.body}</p>
             )}
+
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                handleCommentCreate(this.state.body)
-                history.push(`/accounthome`)
+                handleCommentCreate(this.state.body, this.state.user_id, this.state.idea_id)
+                history.push(`/ideas/:id`)
               }}
+
             >
             <label>
                 <input
