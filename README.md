@@ -6,6 +6,8 @@
 
 **ORIGIO** is a space for makers. Users can create an account and build a collection of ideas. They can edit the titles, dates, and notes for these ideas, as well as add and delete collaborators. 
 
+[ORIGIO](http://origio.surge.sh/home)
+
 <br>
 
 ## MVP
@@ -18,8 +20,7 @@ The **ORIGIO** MVP will allow users to create an account, see all ideas, add a n
 - A user can create an account
 - A user can create an Idea
 - A user can change the Idea
-- A user can add Collaborators
-- A user can change Collaborators
+- A user can add comments to ideas
 - A user can logout and keep the contents of their account.
 
 
