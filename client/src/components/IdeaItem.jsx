@@ -41,9 +41,10 @@ class IdeaItem extends Component {
     })
   }
 
+
   render() {
     const { idea, comments } = this.state
-    const { handleIdeaDelete, history, handleCommentCreate } = this.props
+    const { handleIdeaDelete, history, handleCommentCreate, handleCommentDelete} = this.props
    
     return (<>
       <div className = "idea-item-body">
@@ -61,15 +62,18 @@ class IdeaItem extends Component {
 
             <h3>Comments</h3>
             
-            {comments.filter(comment => comment.idea_id === idea.id).map((comment) =>
-              <p key={comment.id}>{comment.body}</p>
+            {comments && comments.filter(comment => comment.idea_id === idea.id).map((comment) =>
+              <p key={comment.id}>{comment.body}<button onClick={() => {
+                handleCommentDelete(idea.id, comment.id)
+                history.push(`/accounthome`)
+              }}>Delete</button></p>
             )}
 
             <form
               onSubmit={(e) => {
                 e.preventDefault();
                 handleCommentCreate(this.state.idea_id, { body: this.state.body })
-                history.push(`/ideas/${this.state.idea_id}`)
+                history.push(`/accounthome`)
               }}
 
             >

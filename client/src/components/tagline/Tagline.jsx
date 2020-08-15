@@ -26,7 +26,7 @@ export default function Tagline() {
           <div className="makers">
             <div>makers</div>
           </div>
-          <div classname="buttons">
+          <div className="buttons">
             <Link to= '/register'><button>start making</button></Link>
             <Link to= '/login'><button>keep making</button></Link>
           </div>

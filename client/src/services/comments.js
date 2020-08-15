@@ -10,3 +10,8 @@ export const addComment = async (id, commentData) => {
     comment: commentData})
   return resp.data
 }
+
+export const deleteComment = async (idea_id, id) => {
+  const resp = await api.delete(`/ideas/${idea_id}/comments/${id}`)
+  return resp
+}
