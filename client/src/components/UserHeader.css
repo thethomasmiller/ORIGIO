@@ -1,0 +1,35 @@
+.userheader{
+
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top:75px;
+  width: 700px;
+}
+
+.userheader-greeting{
+  font-size: 42px;
+ 
+  
+ 
+}
+
+.userheader-buttons-container{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 700px;
+}
+
+
+.logout-button,
+.accounthome-button {
+  width: 127px;
+  height: 45px;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #FDD33E;
+  border: none;
+
+}
+

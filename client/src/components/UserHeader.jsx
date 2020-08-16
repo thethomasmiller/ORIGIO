@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-
+import './UserHeader.css'
 
 
 export default function UserHeader(props) {
@@ -10,10 +10,16 @@ export default function UserHeader(props) {
 
 
       {currentUser ? (
-        <>
-          <Link to='/accounthome'>
-            <p>Hello, {currentUser.name}</p> </Link> 
-          <button onClick={handleLogout}>Logout</button>
+        <><div className = 'userheader'>
+          
+          <p className='userheader-greeting'>Hello, {currentUser.name}</p>
+          <div className='userheader-buttons-container'>
+          <Link to='/accounthome' style={{textDecoration:'none'},{color:'black'}}> 
+            <button className='accounthome-button'>ALL IDEAS</button>
+          </Link> 
+            <button onClick={handleLogout} className='logout-button'>Logout</button>
+            </div>
+          </div>
         </>
       ) : (
           null
