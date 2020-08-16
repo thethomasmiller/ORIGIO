@@ -23965,3 +23965,828 @@ Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 6.8ms | Allocations: 2520
 Completed 200 OK in 14ms (Views: 3.5ms | ActiveRecord: 10.2ms | Allocations: 3650)
 
 
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:07:38 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:07:38 -0400
+Started GET "/ideas" for ::1 at 2020-08-16 16:07:38 -0400
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IdeasController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[35m (33.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (2.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+  [1m[36mIdea Load (83.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 201ms (Views: 55.8ms | ActiveRecord: 132.8ms | Allocations: 14297)
+
+
+Completed 200 OK in 200ms (Views: 56.6ms | ActiveRecord: 138.3ms | Allocations: 13094)
+
+
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 400ms (Views: 0.8ms | ActiveRecord: 340.6ms | Allocations: 22930)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:07:43 -0400
+Processing by IdeasController#index as HTML
+  [1m[36mIdea Load (7.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 7.1ms | Allocations: 1360)
+
+
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:07:43 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:07:43 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (5.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 5.9ms | Allocations: 1268)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 2.7ms | Allocations: 2709)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:09:19 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:09:19 -0400
+Processing by CommentsController#index as HTML
+Processing by IdeasController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:09:19 -0400
+  [1m[36mComment Load (153.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mIdea Load (156.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 163ms (Views: 9.1ms | ActiveRecord: 153.7ms | Allocations: 2013)
+
+
+Completed 200 OK in 177ms (Views: 20.0ms | ActiveRecord: 156.2ms | Allocations: 3302)
+
+
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 35ms (Views: 0.5ms | ActiveRecord: 28.2ms | Allocations: 1979)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:09:30 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:09:30 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:09:30 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mComment Load (13.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mIdea Load (16.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 5.4ms | ActiveRecord: 16.9ms | Allocations: 3428)
+
+
+Completed 200 OK in 18ms (Views: 3.9ms | ActiveRecord: 13.5ms | Allocations: 2227)
+
+
+  [1m[36mUser Load (25.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 29ms (Views: 0.4ms | ActiveRecord: 25.4ms | Allocations: 3716)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:10:13 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:10:13 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:10:13 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mIdea Load (4.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 4.4ms | Allocations: 1969)
+
+
+  [1m[36mComment Load (27.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 32ms (Views: 3.0ms | ActiveRecord: 27.8ms | Allocations: 2854)
+
+
+  [1m[36mUser Load (42.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 68ms (Views: 0.4ms | ActiveRecord: 42.3ms | Allocations: 3715)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:10:43 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:10:43 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:10:43 -0400
+Processing by IdeasController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mIdea Load (12.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 58ms (Views: 44.1ms | ActiveRecord: 12.1ms | Allocations: 2302)
+
+
+  [1m[36mComment Load (24.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+  [1m[36mUser Load (28.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 4.4ms | ActiveRecord: 24.2ms | Allocations: 2689)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 38ms (Views: 0.5ms | ActiveRecord: 28.3ms | Allocations: 3828)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:11:00 -0400
+Processing by IdeasController#index as HTML
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 1341)
+
+
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:11:00 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:11:00 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 893)
+
+
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (14.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 20ms (Views: 4.4ms | ActiveRecord: 14.9ms | Allocations: 1199)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:11:25 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:11:25 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:11:25 -0400
+Processing by IdeasController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mIdea Load (22.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 26ms (Views: 2.7ms | ActiveRecord: 22.9ms | Allocations: 1825)
+
+
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 9.9ms | Allocations: 2375)
+
+
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (4.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 4.9ms | Allocations: 1199)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:11:45 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:11:45 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:11:45 -0400
+Processing by IdeasController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mIdea Load (1.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.1ms | Allocations: 1508)
+
+
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 3.4ms | Allocations: 2375)
+
+
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (2.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 2.8ms | Allocations: 1199)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:11:48 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:11:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:11:48 -0400
+Processing by IdeasController#index as HTML
+  [1m[36mIdea Load (9.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 4.0ms | ActiveRecord: 9.9ms | Allocations: 1341)
+
+
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mComment Load (4.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 4.3ms | Allocations: 1683)
+
+
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 1.0ms | ActiveRecord: 9.9ms | Allocations: 2233)
+
+
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:12:14 -0400
+Started GET "/ideas" for ::1 at 2020-08-16 16:12:14 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:12:14 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mComment Load (32.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 38ms (Views: 5.2ms | ActiveRecord: 32.1ms | Allocations: 1366)
+
+
+  [1m[36mIdea Load (41.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  [1m[36mUser Load (30.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 51ms (Views: 7.6ms | ActiveRecord: 41.5ms | Allocations: 3777)
+
+
+Completed 200 OK in 47ms (Views: 0.7ms | ActiveRecord: 30.3ms | Allocations: 3715)
+
+
+Started GET "/ideas/new" for ::1 at 2020-08-16 16:12:16 -0400
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"new"}
+Started GET "/ideas/new/comments" for ::1 at 2020-08-16 16:12:16 -0400
+  [1m[36mIdea Load (1.7ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 404 Not Found in 18ms (ActiveRecord: 1.7ms | Allocations: 1112)
+
+
+Processing by CommentsController#index as HTML
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=new):
+  
+app/controllers/ideas_controller.rb:56:in `set_idea'
+  Parameters: {"idea_id"=>"new"}
+  [1m[36mComment Load (2.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 2.7ms | Allocations: 1361)
+
+
+Started GET "/ideas/new" for ::1 at 2020-08-16 16:12:21 -0400
+Started GET "/ideas/new/comments" for ::1 at 2020-08-16 16:12:21 -0400
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"new"}
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1136)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=new):
+  
+app/controllers/ideas_controller.rb:56:in `set_idea'
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 96ms (Views: 95.0ms | ActiveRecord: 0.8ms | Allocations: 92181)
+
+
+Started GET "/ideas/3/comments" for ::1 at 2020-08-16 16:12:24 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"3"}
+Started GET "/ideas/3" for ::1 at 2020-08-16 16:12:24 -0400
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.8ms | Allocations: 1396)
+
+
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.7ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 0.7ms | Allocations: 827)
+
+
+Started GET "/ideas/new" for ::1 at 2020-08-16 16:12:40 -0400
+Started GET "/ideas/new/comments" for ::1 at 2020-08-16 16:12:40 -0400
+Processing by CommentsController#index as HTML
+Processing by IdeasController#show as HTML
+  Parameters: {"idea_id"=>"new"}
+  Parameters: {"id"=>"new"}
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mIdea Load (1.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 404 Not Found in 8ms (ActiveRecord: 1.1ms | Allocations: 1785)
+
+
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.1ms | Allocations: 1743)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=new):
+  
+app/controllers/ideas_controller.rb:56:in `set_idea'
+Started GET "/ideas/1/comments" for ::1 at 2020-08-16 16:12:43 -0400
+Started GET "/ideas/1" for ::1 at 2020-08-16 16:12:43 -0400
+Processing by CommentsController#index as HTML
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  Parameters: {"idea_id"=>"1"}
+  [1m[36mIdea Load (0.7ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 966)
+
+
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 1.0ms | Allocations: 2213)
+
+
+Started POST "/ideas" for ::1 at 2020-08-16 16:12:54 -0400
+Processing by IdeasController#create as HTML
+  Parameters: {"idea"=>{"title"=>"Meow", "date"=>"08/13/20", "notes"=>"A mystery", "img_url"=>"https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"}}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ideas_controller.rb:22:in `create'
+  [1m[36mIdea Create (62.5ms)[0m  [1m[32mINSERT INTO "ideas" ("title", "date", "notes", "img_url", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Meow"], ["date", "08/13/20"], ["notes", "A mystery"], ["img_url", "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"], ["user_id", 1], ["created_at", "2020-08-16 20:12:54.510352"], ["updated_at", "2020-08-16 20:12:54.510352"]]
+  ↳ app/controllers/ideas_controller.rb:22:in `create'
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ideas_controller.rb:22:in `create'
+Completed 201 Created in 111ms (Views: 6.6ms | ActiveRecord: 71.1ms | Allocations: 5687)
+
+
+Started GET "/ideas/2/comments" for ::1 at 2020-08-16 16:12:56 -0400
+Started GET "/ideas/2" for ::1 at 2020-08-16 16:12:56 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"2"}
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+  [1m[36mIdea Load (1.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.7ms | Allocations: 1329)
+
+
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 2166)
+
+
+Started GET "/ideas/new" for ::1 at 2020-08-16 16:13:02 -0400
+Started GET "/ideas/new/comments" for ::1 at 2020-08-16 16:13:02 -0400
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"new"}
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"new"}
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.7ms | Allocations: 1199)
+
+
+  [1m[36mIdea Load (6.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 404 Not Found in 9ms (ActiveRecord: 6.5ms | Allocations: 2139)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=new):
+  
+app/controllers/ideas_controller.rb:56:in `set_idea'
+Started GET "/ideas/3" for ::1 at 2020-08-16 16:13:13 -0400
+Started GET "/ideas/3/comments" for ::1 at 2020-08-16 16:13:13 -0400
+Processing by IdeasController#show as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"3"}
+  Parameters: {"id"=>"3"}
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+  [1m[36mIdea Load (2.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.9ms | Allocations: 1315)
+
+
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 2.2ms | Allocations: 2163)
+
+
+Started GET "/ideas/new" for ::1 at 2020-08-16 16:13:39 -0400
+Started GET "/ideas" for ::1 at 2020-08-16 16:13:39 -0400
+Started GET "/ideas/new/comments" for ::1 at 2020-08-16 16:13:39 -0400
+Processing by IdeasController#show as HTML
+Processing by IdeasController#index as HTML
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:13:39 -0400
+  Parameters: {"id"=>"new"}
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:13:39 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"new"}
+  [1m[36mIdea Load (28.8ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  [1m[36mIdea Load (26.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 404 Not Found in 32ms (ActiveRecord: 26.9ms | Allocations: 2499)
+
+
+Completed 200 OK in 38ms (Views: 7.9ms | ActiveRecord: 28.8ms | Allocations: 3473)
+
+
+  [1m[36mComment Load (10.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=new):
+  
+app/controllers/ideas_controller.rb:56:in `set_idea'
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 116ms (Views: 104.8ms | ActiveRecord: 10.4ms | Allocations: 35032)
+
+
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (63.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 69ms (Views: 5.5ms | ActiveRecord: 63.5ms | Allocations: 3382)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 12.3ms | Allocations: 1958)
+
+
+Started GET "/ideas/new" for ::1 at 2020-08-16 16:13:42 -0400
+Started GET "/ideas/new/comments" for ::1 at 2020-08-16 16:13:42 -0400
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mIdea Load (4.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 404 Not Found in 7ms (ActiveRecord: 4.3ms | Allocations: 660)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=new):
+  
+app/controllers/ideas_controller.rb:56:in `set_idea'
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"new"}
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.0ms | Allocations: 2203)
+
+
+Started GET "/ideas/3" for ::1 at 2020-08-16 16:13:44 -0400
+Started GET "/ideas/3/comments" for ::1 at 2020-08-16 16:13:44 -0400
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.8ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Processing by CommentsController#index as HTML
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+  Parameters: {"idea_id"=>"3"}
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.8ms | Allocations: 1173)
+
+
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.9ms | Allocations: 1414)
+
+
+Started GET "/ideas/new" for ::1 at 2020-08-16 16:14:11 -0400
+Started GET "/ideas/new/comments" for ::1 at 2020-08-16 16:14:11 -0400
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"new"}
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"new"}
+  [1m[36mIdea Load (2.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 404 Not Found in 7ms (ActiveRecord: 2.2ms | Allocations: 1047)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=new):
+  
+app/controllers/ideas_controller.rb:56:in `set_idea'
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 113ms (Views: 110.7ms | ActiveRecord: 1.2ms | Allocations: 92655)
+
+
+Started GET "/ideas/1" for ::1 at 2020-08-16 16:14:14 -0400
+Started GET "/ideas/1/comments" for ::1 at 2020-08-16 16:14:14 -0400
+Processing by IdeasController#show as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"id"=>"1"}
+  Parameters: {"idea_id"=>"1"}
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mIdea Load (1.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 1674)
+
+
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 2076)
+
+
+Started GET "/ideas/new" for ::1 at 2020-08-16 16:14:16 -0400
+Started GET "/ideas/new/comments" for ::1 at 2020-08-16 16:14:16 -0400
+Processing by IdeasController#show as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"id"=>"new"}
+  Parameters: {"idea_id"=>"new"}
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mIdea Load (1.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms | Allocations: 1676)
+
+
+Completed 404 Not Found in 5ms (ActiveRecord: 1.5ms | Allocations: 1907)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Idea with 'id'=new):
+  
+app/controllers/ideas_controller.rb:56:in `set_idea'
+Started GET "/ideas/1" for ::1 at 2020-08-16 16:14:18 -0400
+Started GET "/ideas/1/comments" for ::1 at 2020-08-16 16:14:18 -0400
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"1"}
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"1"}
+  [1m[36mIdea Load (1.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 26ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 1630)
+
+
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 1.1ms | Allocations: 1998)
+
+
+Started POST "/auth/login" for ::1 at 2020-08-16 16:14:36 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (39.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 438ms (Views: 0.3ms | ActiveRecord: 39.6ms | Allocations: 1143)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:15:30 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:15:30 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:15:30 -0400
+Processing by CommentsController#index as HTML
+Processing by IdeasController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mIdea Load (8.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+  [1m[36mComment Load (6.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 200 OK in 30ms (Views: 17.1ms | ActiveRecord: 8.6ms | Allocations: 1836)
+
+
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 28ms (Views: 20.7ms | ActiveRecord: 6.4ms | Allocations: 2874)
+
+
+  [1m[36mUser Load (19.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 51ms (Views: 1.7ms | ActiveRecord: 22.1ms | Allocations: 4031)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:19:10 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:19:10 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:19:10 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mIdea Load (201.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 269ms (Views: 63.2ms | ActiveRecord: 201.6ms | Allocations: 1980)
+
+
+  [1m[36mComment Load (167.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 174ms (Views: 5.9ms | ActiveRecord: 167.5ms | Allocations: 2843)
+
+
+  [1m[36mUser Load (393.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 413ms (Views: 1.0ms | ActiveRecord: 393.8ms | Allocations: 4785)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:19:45 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:19:45 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:19:45 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by IdeasController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mComment Load (19.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 48ms (Views: 22.4ms | ActiveRecord: 19.6ms | Allocations: 2114)
+
+
+  [1m[36mUser Load (26.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 41ms (Views: 0.6ms | ActiveRecord: 26.7ms | Allocations: 2348)
+
+
+  [1m[36mIdea Load (372.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 385ms (Views: 6.4ms | ActiveRecord: 372.3ms | Allocations: 4187)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:21:07 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:21:07 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:21:08 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by IdeasController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mIdea Load (175.8ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+  [1m[36mComment Load (183.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 215ms (Views: 18.1ms | ActiveRecord: 183.7ms | Allocations: 2363)
+
+
+Completed 200 OK in 199ms (Views: 22.0ms | ActiveRecord: 175.8ms | Allocations: 2799)
+
+
+  [1m[36mUser Load (186.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 205ms (Views: 1.0ms | ActiveRecord: 186.4ms | Allocations: 3776)
+
+
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:21:17 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:21:17 -0400
+Started GET "/ideas" for ::1 at 2020-08-16 16:21:17 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (7.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 6.6ms | ActiveRecord: 7.2ms | Allocations: 2100)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 25ms (Views: 0.6ms | ActiveRecord: 10.0ms | Allocations: 3141)
+
+
+  [1m[36mIdea Load (17.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 25ms (Views: 6.7ms | ActiveRecord: 17.9ms | Allocations: 3832)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:21:34 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:21:34 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:21:34 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mIdea Load (9.0ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 4.2ms | ActiveRecord: 9.0ms | Allocations: 2454)
+
+
+  [1m[36mComment Load (8.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 5.3ms | ActiveRecord: 8.1ms | Allocations: 2877)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 20ms (Views: 0.6ms | ActiveRecord: 12.1ms | Allocations: 3999)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:21:36 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:21:36 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:21:36 -0400
+Processing by IdeasController#index as HTML
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 1503)
+
+
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 1208)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 7.0ms | Allocations: 893)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:21:39 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:21:39 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:21:39 -0400
+Processing by IdeasController#index as HTML
+  [1m[36mIdea Load (2.8ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+Processing by CommentsController#index as HTML
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+  Parameters: {"idea_id"=>"undefined"}
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 2.8ms | Allocations: 1852)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 2.1ms | Allocations: 1908)
+
+
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 3.9ms | Allocations: 2207)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:21:48 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:21:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:21:48 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"idea_id"=>"undefined"}
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mIdea Load (2.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 3.5ms | Allocations: 1812)
+
+
+  [1m[36mComment Load (5.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 2.5ms | Allocations: 3298)
+
+
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 5.8ms | Allocations: 3147)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:21:53 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:21:53 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:21:53 -0400
+Processing by IdeasController#index as HTML
+  [1m[36mIdea Load (2.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Processing by CommentsController#index as HTML
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 2.2ms | Allocations: 1948)
+
+
+Processing by AuthenticationController#verify as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 5.8ms | Allocations: 1073)
+
+
+  [1m[36mComment Load (16.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 21ms (Views: 3.4ms | ActiveRecord: 16.6ms | Allocations: 2188)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:22:37 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:22:37 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:22:37 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by IdeasController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mComment Load (30.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mUser Load (20.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+  [1m[36mIdea Load (35.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 58ms (Views: 23.3ms | ActiveRecord: 30.6ms | Allocations: 1996)
+
+
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 53ms (Views: 0.8ms | ActiveRecord: 20.8ms | Allocations: 2655)
+
+
+Completed 200 OK in 65ms (Views: 28.7ms | ActiveRecord: 35.6ms | Allocations: 3784)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:23:19 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:23:19 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:23:19 -0400
+Processing by CommentsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by IdeasController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIdea Load (14.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  [1m[36mComment Load (13.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 17.2ms | Allocations: 2473)
+
+
+Completed 200 OK in 28ms (Views: 13.8ms | ActiveRecord: 13.5ms | Allocations: 3383)
+
+
+Completed 200 OK in 29ms (Views: 13.3ms | ActiveRecord: 14.9ms | Allocations: 3061)
+
+

@@ -99,7 +99,7 @@ export default class Main extends Component {
               /></>
           )} />
 
-          <Route path='/ideas/new' render={(props) => (
+          <Route exact path='/ideas/new' render={(props) => (
             <CreateIdea
               {...props}
               handleIdeaCreate={this.handleIdeaCreate}

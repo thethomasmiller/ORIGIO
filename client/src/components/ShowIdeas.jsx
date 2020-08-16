@@ -19,7 +19,7 @@ export default function ShowIdeas(props) {
        </React.Fragment>
       ))} </div>
     
-      <Link to="/ideas/new" ><button className = 'create-button' >Create Idea</button></Link>
+      
     </div>
   )
 }
