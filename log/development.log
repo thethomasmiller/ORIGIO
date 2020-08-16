@@ -24982,3 +24982,35 @@ Processing by IdeasController#destroy as HTML
 Completed 204 No Content in 25ms (ActiveRecord: 16.3ms | Allocations: 3210)
 
 
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:31:58 -0400
+Started GET "/ideas" for ::1 at 2020-08-16 16:31:58 -0400
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IdeasController#index as HTML
+  [1m[36mComment Load (96.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mIdea Load (67.0ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 478ms (Views: 299.9ms | ActiveRecord: 108.6ms | Allocations: 16213)
+
+
+Completed 200 OK in 449ms (Views: 126.5ms | ActiveRecord: 225.9ms | Allocations: 13851)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:32:02 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:32:02 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (3.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 3.6ms | Allocations: 1227)
+
+
+Processing by IdeasController#index as HTML
+  [1m[36mIdea Load (351.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 363ms (Views: 11.0ms | ActiveRecord: 351.9ms | Allocations: 1372)
+
+

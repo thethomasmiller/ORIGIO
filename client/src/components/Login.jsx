@@ -23,7 +23,8 @@ export default class Login extends Component {
 
     return (
       <>
-        <form className = 'login-form'
+        <form
+          className='login-form'
           onSubmit={(e) => {
           e.preventDefault();
           handleLogin(this.state)
