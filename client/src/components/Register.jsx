@@ -50,7 +50,7 @@ export default class Register extends Component {
                 name="email"
                 value={email}
                 onChange={this.handleChange}
-                placeholder='enter username'
+                placeholder='enter email'
               />
             </label>
             
