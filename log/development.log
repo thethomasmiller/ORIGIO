@@ -25014,3 +25014,245 @@ Processing by IdeasController#index as HTML
 Completed 200 OK in 363ms (Views: 11.0ms | ActiveRecord: 351.9ms | Allocations: 1372)
 
 
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:43:45 -0400
+Started GET "/ideas" for ::1 at 2020-08-16 16:43:45 -0400
+  [1m[35m (143.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IdeasController#index as HTML
+  [1m[35m (25.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommentsController#index as HTML
+  [1m[36mIdea Load (15.7ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (41.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 462ms (Views: 381.3ms | ActiveRecord: 64.4ms | Allocations: 12281)
+
+
+Completed 200 OK in 798ms (Views: 67.7ms | ActiveRecord: 715.8ms | Allocations: 12535)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:43:48 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:43:48 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  [1m[36mIdea Load (3.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  Parameters: {"idea_id"=>"undefined"}
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 3.1ms | Allocations: 1849)
+
+
+  [1m[36mComment Load (93.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 105ms (Views: 11.3ms | ActiveRecord: 93.3ms | Allocations: 2046)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:44:03 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:44:03 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mIdea Load (4.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+  [1m[36mComment Load (8.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 4.2ms | Allocations: 1750)
+
+
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 30ms (Views: 20.3ms | ActiveRecord: 8.9ms | Allocations: 2689)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:44:07 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:44:07 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  [1m[36mIdea Load (1.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+  Parameters: {"idea_id"=>"undefined"}
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 1.5ms | Allocations: 1709)
+
+
+  [1m[36mComment Load (10.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 3.7ms | ActiveRecord: 10.3ms | Allocations: 2022)
+
+
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:44:22 -0400
+Started GET "/ideas" for ::1 at 2020-08-16 16:44:22 -0400
+Processing by CommentsController#index as HTML
+Processing by IdeasController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 1.0ms | Allocations: 1199)
+
+
+  [1m[36mIdea Load (16.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 29ms (Views: 10.3ms | ActiveRecord: 16.6ms | Allocations: 2811)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:44:58 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:44:58 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by IdeasController#index as HTML
+  [1m[36mComment Load (17.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 39ms (Views: 17.7ms | ActiveRecord: 17.1ms | Allocations: 1321)
+
+
+  [1m[36mIdea Load (31.8ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 38ms (Views: 5.5ms | ActiveRecord: 31.8ms | Allocations: 2683)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:46:04 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:46:04 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mIdea Load (17.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+  [1m[36mComment Load (408.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 200 OK in 444ms (Views: 406.1ms | ActiveRecord: 17.3ms | Allocations: 1824)
+
+
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 488ms (Views: 77.8ms | ActiveRecord: 408.2ms | Allocations: 2687)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:46:09 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:46:09 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.0ms | Allocations: 1199)
+
+
+  [1m[36mIdea Load (12.7ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 3.5ms | ActiveRecord: 12.7ms | Allocations: 3160)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:47:12 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:47:12 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (95.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+  [1m[36mIdea Load (98.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 107ms (Views: 9.1ms | ActiveRecord: 95.9ms | Allocations: 1335)
+
+
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 124ms (Views: 22.4ms | ActiveRecord: 98.2ms | Allocations: 2828)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:49:58 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:49:58 -0400
+Processing by IdeasController#index as HTML
+  [1m[36mIdea Load (1.0ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 34ms (Views: 24.6ms | ActiveRecord: 1.0ms | Allocations: 1343)
+
+
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.1ms | Allocations: 1199)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:50:03 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:50:03 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mComment Load (206.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 211ms (Views: 4.5ms | ActiveRecord: 206.0ms | Allocations: 1199)
+
+
+  [1m[36mIdea Load (268.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 273ms (Views: 4.3ms | ActiveRecord: 268.3ms | Allocations: 3160)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:50:46 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:50:46 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by IdeasController#index as HTML
+  [1m[36mComment Load (28.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 32ms (Views: 3.6ms | ActiveRecord: 28.3ms | Allocations: 1630)
+
+
+  [1m[36mIdea Load (40.7ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 46ms (Views: 4.6ms | ActiveRecord: 40.7ms | Allocations: 2683)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:51:05 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:51:05 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by IdeasController#index as HTML
+  [1m[36mComment Load (41.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 76ms (Views: 29.5ms | ActiveRecord: 41.0ms | Allocations: 1630)
+
+
+  [1m[36mIdea Load (20.0ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 35ms (Views: 7.7ms | ActiveRecord: 20.0ms | Allocations: 2683)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:51:08 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:51:08 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mIdea Load (1.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+  [1m[36mComment Load (1.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.5ms | Allocations: 1502)
+
+
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.7ms | Allocations: 2683)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:51:16 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:51:16 -0400
+Processing by IdeasController#index as HTML
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+  [1m[36mIdea Load (10.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 3.9ms | ActiveRecord: 10.9ms | Allocations: 1488)
+
+
+  [1m[36mComment Load (11.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 4.6ms | ActiveRecord: 11.6ms | Allocations: 2683)
+
+
+Started GET "/ideas" for ::1 at 2020-08-16 16:52:28 -0400
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:52:28 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by IdeasController#index as HTML
+  [1m[36mIdea Load (49.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 63ms (Views: 13.1ms | ActiveRecord: 49.1ms | Allocations: 1343)
+
+
+  [1m[36mComment Load (71.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 90ms (Views: 14.2ms | ActiveRecord: 71.0ms | Allocations: 2811)
+
+
