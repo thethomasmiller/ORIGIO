@@ -56,7 +56,7 @@ export default class Login extends Component {
             </label>
            
           <button className='login-submit-button'>SUBMIT</button>
-            <Link to='/register'>make an account</Link>
+            <Link to='/register' style={{textDecoration:'none', color:'black'}}>make an account</Link>
             </div>
         </form>
         <Footer />

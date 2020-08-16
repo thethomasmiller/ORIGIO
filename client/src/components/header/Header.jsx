@@ -4,7 +4,7 @@ import './Header.css'
 
 export default function Header() {
   return (
-    <Link to= '/home' style={{textDecoration: 'none', color: 'black'}}>
+    
       <div className="header">
       <div>Origio</div>
       <div>Origio</div>
@@ -13,6 +13,6 @@ export default function Header() {
       <div>Origio</div>
       <div>O</div>
     </div>
-    </Link> 
+    
   )
 }

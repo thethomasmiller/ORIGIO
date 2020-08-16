@@ -2,6 +2,7 @@
   font-size: 144px;
   margin: auto;
   text-transform: uppercase;
+  margin-top:50px;
 }
 
 .login-form{
@@ -15,7 +16,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 200px ;
+  height: 400px ;
 }
 
 .login-username-field, 

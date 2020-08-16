@@ -1,5 +1,11 @@
 .tagline{
   display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 1200px;
+
+  
+  
 
 }
 .vertical-text{
@@ -10,20 +16,39 @@
   text-transform: uppercase;
   height: 500px;
   margin: auto;
+  margin-top:15px;
 }
 
-.makers-button{
+.makers-button-container{
   display:flex;
+  flex-direction: column;
+  margin-top:30px;
+  margin: auto;
+  
+  
   
 }
-
-.makers-buttons{
-  display: flex;
-  flex-direction: column;
-
-}
-.makers{
+.makers-title{
   font-size: 250px;
   text-transform: uppercase;
   margin: auto;
+}
+.makers-buttons{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: 0 200px;
+
+}
+
+.start-making-button,
+.keep-making-button{
+  font-size:18px;
+  width: 160px;
+  height: 60px;
+  background: #CECBCB;
+  border: none;
+  border-radius: 50px;
+
+
 }

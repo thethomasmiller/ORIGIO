@@ -79,7 +79,7 @@ export default class Register extends Component {
             </label>
 
             <button className='register-submit-button'>Submit</button>
-            <Link to='/login'>already making? Login</Link>
+            <Link to='/login' style={{textDecoration:'none', color: 'black'}}>already making? Login</Link>
           </div>
         </form>
         <Footer />

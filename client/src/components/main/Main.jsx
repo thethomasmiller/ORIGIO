@@ -78,7 +78,7 @@ export default class Main extends Component {
       return (
         <main>
 
-          <Route exact path='/home' component={Landing} />
+          <Route exact path='/' component={Landing} />
           <Route exact path='/login' render={(props) =>
 
             <Login
