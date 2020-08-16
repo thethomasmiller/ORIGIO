@@ -24790,3 +24790,195 @@ Completed 200 OK in 28ms (Views: 13.8ms | ActiveRecord: 13.5ms | Allocations: 33
 Completed 200 OK in 29ms (Views: 13.3ms | ActiveRecord: 14.9ms | Allocations: 3061)
 
 
+Started GET "/ideas/3" for ::1 at 2020-08-16 16:26:13 -0400
+Started GET "/ideas/3/comments" for ::1 at 2020-08-16 16:26:13 -0400
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"3"}
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mComment Load (10.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 188ms (Views: 44.5ms | ActiveRecord: 129.8ms | Allocations: 10484)
+
+
+  [1m[36mIdea Load (0.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 200 OK in 250ms (Views: 1.6ms | ActiveRecord: 197.1ms | Allocations: 13711)
+
+
+Started PUT "/ideas/3" for ::1 at 2020-08-16 16:26:23 -0400
+Processing by IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"Third Idea", "date"=>"8/12/2020", "notes"=>"8/12/2020", "img_url"=>"https://images.unsplash.com/photo-1524116125474-e3eec64213f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"}, "id"=>"3"}
+  [1m[36mIdea Load (2.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+  [1m[36mIdea Update (28.6ms)[0m  [1m[33mUPDATE "ideas" SET "notes" = $1, "img_url" = $2, "updated_at" = $3 WHERE "ideas"."id" = $4[0m  [["notes", "8/12/2020"], ["img_url", "https://images.unsplash.com/photo-1524116125474-e3eec64213f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"], ["updated_at", "2020-08-16 20:26:23.995621"], ["id", 3]]
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+Completed 200 OK in 155ms (Views: 0.8ms | ActiveRecord: 43.4ms | Allocations: 13247)
+
+
+Started GET "/ideas/3" for ::1 at 2020-08-16 16:26:35 -0400
+Started GET "/ideas/3/comments" for ::1 at 2020-08-16 16:26:35 -0400
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"3"}
+  [1m[36mIdea Load (0.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 1244)
+
+
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.9ms | Allocations: 2211)
+
+
+Started PUT "/ideas/3" for ::1 at 2020-08-16 16:26:40 -0400
+Processing by IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"My Book", "date"=>"8/12/2020", "notes"=>"8/12/2020", "img_url"=>"https://images.unsplash.com/photo-1524116125474-e3eec64213f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"}, "id"=>"3"}
+  [1m[36mIdea Load (0.7ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+  [1m[36mIdea Update (1.4ms)[0m  [1m[33mUPDATE "ideas" SET "title" = $1, "updated_at" = $2 WHERE "ideas"."id" = $3[0m  [["title", "My Book"], ["updated_at", "2020-08-16 20:26:40.836124"], ["id", 3]]
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+Completed 200 OK in 24ms (Views: 0.5ms | ActiveRecord: 3.8ms | Allocations: 5048)
+
+
+Started GET "/ideas/2/comments" for ::1 at 2020-08-16 16:26:43 -0400
+Started GET "/ideas/2" for ::1 at 2020-08-16 16:26:43 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"2"}
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.0ms | Allocations: 1328)
+
+
+  [1m[36mIdea Load (2.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 2.4ms | Allocations: 2164)
+
+
+Started PUT "/ideas/2" for ::1 at 2020-08-16 16:27:20 -0400
+Processing by IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"My Film", "date"=>"8/11/2020", "notes"=>"8/11/2020", "img_url"=>"https://images.unsplash.com/photo-1493804714600-6edb1cd93080?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"}, "id"=>"2"}
+  [1m[36mIdea Load (19.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+  [1m[36mIdea Update (4.7ms)[0m  [1m[33mUPDATE "ideas" SET "title" = $1, "img_url" = $2, "updated_at" = $3 WHERE "ideas"."id" = $4[0m  [["title", "My Film"], ["img_url", "https://images.unsplash.com/photo-1493804714600-6edb1cd93080?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"], ["updated_at", "2020-08-16 20:27:20.385387"], ["id", 2]]
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+  [1m[35m (22.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+Completed 200 OK in 168ms (Views: 1.0ms | ActiveRecord: 47.9ms | Allocations: 5026)
+
+
+Started GET "/ideas/1/comments" for ::1 at 2020-08-16 16:27:24 -0400
+Started GET "/ideas/1" for ::1 at 2020-08-16 16:27:24 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"1"}
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mIdea Load (1.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 1.1ms | Allocations: 824)
+
+
+  [1m[36mComment Load (6.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 6.7ms | Allocations: 2519)
+
+
+Started PUT "/ideas/1" for ::1 at 2020-08-16 16:28:18 -0400
+Processing by IdeasController#update as HTML
+  Parameters: {"idea"=>{"title"=>"My App", "date"=>"8/10/2020", "notes"=>"8/10/2020", "img_url"=>"https://images.unsplash.com/photo-1516259680870-b878830674f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"}, "id"=>"1"}
+  [1m[36mIdea Load (1.1ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+  [1m[36mIdea Update (3.9ms)[0m  [1m[33mUPDATE "ideas" SET "title" = $1, "notes" = $2, "img_url" = $3, "updated_at" = $4 WHERE "ideas"."id" = $5[0m  [["title", "My App"], ["notes", "8/10/2020"], ["img_url", "https://images.unsplash.com/photo-1516259680870-b878830674f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"], ["updated_at", "2020-08-16 20:28:18.880044"], ["id", 1]]
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ideas_controller.rb:41:in `update'
+Completed 200 OK in 49ms (Views: 2.3ms | ActiveRecord: 6.9ms | Allocations: 5037)
+
+
+Started GET "/ideas/undefined/comments" for ::1 at 2020-08-16 16:29:12 -0400
+Started GET "/ideas" for ::1 at 2020-08-16 16:29:12 -0400
+Started GET "/auth/verify" for ::1 at 2020-08-16 16:29:12 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"undefined"}
+Processing by IdeasController#index as HTML
+  [1m[36mIdea Load (37.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/controllers/ideas_controller.rb:9:in `index'
+Completed 200 OK in 57ms (Views: 18.0ms | ActiveRecord: 37.3ms | Allocations: 1505)
+
+
+  [1m[36mComment Load (97.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 117ms (Views: 14.1ms | ActiveRecord: 97.5ms | Allocations: 3307)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 1.6ms | Allocations: 1018)
+
+
+Started GET "/ideas/6/comments" for ::1 at 2020-08-16 16:29:16 -0400
+Started GET "/ideas/6" for ::1 at 2020-08-16 16:29:16 -0400
+Processing by CommentsController#index as HTML
+  Parameters: {"idea_id"=>"6"}
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mIdea Load (0.6ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mComment Load (1.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+  ↳ app/controllers/comments_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 1481)
+
+
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 1.7ms | Allocations: 2072)
+
+
+Started DELETE "/ideas/6" for ::1 at 2020-08-16 16:29:18 -0400
+Processing by IdeasController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mIdea Load (0.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/ideas_controller.rb:56:in `set_idea'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ideas_controller.rb:50:in `destroy'
+  [1m[36mIdea Destroy (13.6ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/ideas_controller.rb:50:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ideas_controller.rb:50:in `destroy'
+Completed 204 No Content in 25ms (ActiveRecord: 16.3ms | Allocations: 3210)
+
+

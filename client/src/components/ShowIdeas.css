@@ -26,6 +26,7 @@
 .idea-gallery {
   display: flex;
   justify-content: space-evenly;
+  text-transform: uppercase;
 
 }
 
