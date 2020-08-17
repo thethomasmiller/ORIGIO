@@ -3,10 +3,6 @@
   justify-content: center;
   margin: 0 auto;
   width: 1200px;
-
-  
-  
-
 }
 .vertical-text{
   display: flex;
@@ -29,10 +25,30 @@
   
 }
 .makers-title{
-  font-size: 250px;
+  font-size: 150px;
   text-transform: uppercase;
-  margin: auto;
 }
+
+.makers-text{
+  border-bottom: 20px solid black;
+  color: black;
+  padding-bottom: .25em;
+  text-decoration: none;
+
+}
+
+
+.makers-text:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='pink' stroke-width='1' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 20%;
+  border-bottom: 0;
+  padding-bottom: .3em;
+  text-decoration: none;
+}
+
+
 .makers-buttons{
   display: flex;
   justify-content: space-between;
@@ -49,6 +65,48 @@
   background: #CECBCB;
   border: none;
   border-radius: 50px;
+  margin-left: -200px;
+}
+
+.start-making-button:hover,
+.keep-making-button:hover{
+  color: white;
+  background-image: url('https://media.giphy.com/media/YiukuW579wzmM/giphy.gif');
+}
+
+
+@media only screen and (max-width: 375px) {
+
+  .tagline{
+    flex-direction: column;
+    width:375px;
+    font-size:12px;
+    
+  }
+
+  .vertical-text{
+    flex-direction:row;
+    height: 30px;
+    margin-top: 25px;
+
+  }
+.space,
+.for {
+  display: flex;
+  margin-left: 10px;
+
+}
+
+.makers-text{
+  font-size:72px;
+}
+
+.makers-buttons{
+  display: flex;
+  justify-content: space-evenly;
+  width: 375px;
+}
+
 
 
 }

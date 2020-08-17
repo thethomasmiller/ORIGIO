@@ -8,14 +8,14 @@ export default function Tagline() {
       <div className="tagline">
         <div className="vertical-text">
           <div>a</div>
-          <div>
+          <div className='space'>
             <div>s</div>
             <div>p</div>
             <div>a</div>
             <div>c</div>
             <div>e</div>
           </div>
-          <div>
+          <div className='for'>
             <div>f</div>
             <div>o</div>
             <div>r</div>
@@ -24,7 +24,7 @@ export default function Tagline() {
         </div>
         <div className="makers-button-container">
           <div className="makers-title">
-            <div>makers</div>
+            <p className='makers-text'>makers</p>
           </div>
           <div className="makers-buttons">
             <Link to= '/register'><button className='start-making-button'>start making</button></Link>
