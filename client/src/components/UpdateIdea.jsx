@@ -40,12 +40,14 @@ export default class UpdateIdea extends Component {
   render() {
     const {handleIdeaUpdate, history, id} = this.props
     return (
-      <form onSubmit={(e) => {
+      <form
+        className='update-idea-form'
+        onSubmit={(e) => {
         e.preventDefault();
         handleIdeaUpdate(id, this.state)
         history.push(`/accounthome`)
       }}>
-        <h3>Make Idea</h3>
+        <h3>Change Idea</h3>
         <label>
           Title:
            <input

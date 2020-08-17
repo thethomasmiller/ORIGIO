@@ -29,7 +29,7 @@ export default class Register extends Component {
           onSubmit={(e) => {
             e.preventDefault();
             handleRegister(this.state);
-            history.push('/');
+            history.push('/accounthome');
           }}>
           <h3 className='register-title'>make account</h3>
           <div className='register-input-fields'>

@@ -6,7 +6,7 @@ import './IdeaItem.css'
 
 
 class IdeaItem extends Component {
- 
+
   state = {
     idea: null,
     comments: null,
@@ -44,29 +44,46 @@ class IdeaItem extends Component {
 
   render() {
     const { idea, comments } = this.state
-    const { handleIdeaDelete, history, handleCommentCreate, handleCommentDelete} = this.props
-   
+    const { handleIdeaDelete, history, handleCommentCreate, handleCommentDelete } = this.props
+
     return (<>
-      <div className = "idea-item-body">
-        {idea && (
-          <>
-            <h3>{idea.title}</h3>
-            <h4>{idea.date}</h4>
-            <h4>{idea.notes}</h4>
-            <Link to={`/ideas/${idea.id}/edit`}><button>Edit</button></Link>
 
-            <button onClick={() => {
-              handleIdeaDelete(idea.id)
-              history.push('/accounthome')
-            }}>Delete</button>
+      {idea && (
+        <>
+          <div className='idea-item-container'>
+            <div className='image-info-button-container'>
+            <div className='idea-item-title'>
+                <p>{idea.title}</p>
+                </div>
+            <div className='image-info-container'>
+             <div className='idea-item-image-container'>
+              <img src={idea.img_url} className='idea-item-image' />
+                </div>
+               
+            <div className='idea-item-info-container'>
+              
+              <p>{idea.date}</p>
+              <p>{idea.notes}</p>
+              </div>
+              </div>
+            <div className='idea-item-button-container'>
+              <Link to={`/ideas/${idea.id}/edit`}><button className='idea-edit-button'>Change</button></Link>
 
+              <button className='idea-delete-button' onClick={() => {
+                handleIdeaDelete(idea.id)
+                history.push('/accounthome')
+              }}>Delete</button>
+              </div>
+              </div>
             <h3>Comments</h3>
-            
+
             {comments && comments.filter(comment => comment.idea_id === idea.id).map((comment) =>
-              <p key={comment.id}>{comment.body}<button onClick={() => {
+              <div className='comment-body-button-container'>
+              <p key={comment.id}>{comment.body}<button className='comment-delete-button' onClick={() => {
                 handleCommentDelete(idea.id, comment.id)
                 history.push(`/accounthome`)
-              }}>Delete</button></p>
+                }}>Delete</button></p>
+                </div>
             )}
 
             <form
@@ -77,21 +94,22 @@ class IdeaItem extends Component {
               }}
 
             >
-            <label>
+              <label>
                 <input
-                    type='text'
-                    name='body'
-                    value={this.state.body}
-                    onChange={this.handleChange}
+                  type='text'
+                  name='body'
+                  value={this.state.body}
+                  onChange={this.handleChange}
                 />
               </label>
               <button>Add</button>
             </form>
-          </>
-        )}
+          </div>
+        </>
+      )}
 
 
-      </div>
+
     </>)
   }
 }
