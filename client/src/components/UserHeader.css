@@ -8,11 +8,21 @@
   width: 700px;
 }
 
+.image-greeting{
+  display: flex;
+  align-items: center;
+}
+
 .userheader-greeting{
   font-size: 42px;
- 
-  
- 
+  margin-left:10px;
+}
+
+.user-image{
+  border-radius:50%;
+  border: none;
+  height:60px;
+  width: 60px;
 }
 
 .userheader-buttons-container{

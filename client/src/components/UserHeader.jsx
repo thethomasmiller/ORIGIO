@@ -11,9 +11,11 @@ export default function UserHeader(props) {
 
       {currentUser ? (
         <><div className='userheader'>
-
+          <div className='image-greeting'>
+           <img className='user-image' src={currentUser.img_url}/>
           <p className='userheader-greeting'>Hello, {currentUser.name}</p>
-          <div className='userheader-buttons-container'>
+          </div>
+            <div className='userheader-buttons-container'>
             <Link to='/accounthome' style={{ textDecoration: 'none', color: 'black' }}>
               <button className='accounthome-button'>ALL IDEAS</button>
             </Link>
