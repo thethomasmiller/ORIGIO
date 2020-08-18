@@ -52,59 +52,67 @@ class IdeaItem extends Component {
         <>
           <div className='idea-item-container'>
             <div className='image-info-button-container'>
-            <div className='idea-item-title'>
+              <div className='idea-item-title'>
                 <p>{idea.title}</p>
+              </div>
+              <div className='image-info-container'>
+                <div className='idea-item-image-container'>
+                  <img src={idea.img_url} className='idea-item-image' />
                 </div>
-            <div className='image-info-container'>
-             <div className='idea-item-image-container'>
-              <img src={idea.img_url} className='idea-item-image' />
+
+                <div className='idea-item-info-container'>
+
+                  <p>{idea.date}</p>
+                  <p>{idea.notes}</p>
                 </div>
-               
-            <div className='idea-item-info-container'>
-              
-              <p>{idea.date}</p>
-              <p>{idea.notes}</p>
               </div>
-              </div>
-            <div className='idea-item-button-container'>
-              <Link to={`/ideas/${idea.id}/edit`}><button className='idea-edit-button'>Change</button></Link>
+              <div className='idea-item-button-container'>
+                <Link to={`/ideas/${idea.id}/edit`}><button className='idea-edit-button'>Change</button></Link>
 
-              <button className='idea-delete-button' onClick={() => {
-                handleIdeaDelete(idea.id)
-                history.push('/accounthome')
-              }}>Delete</button>
+                <button className='idea-delete-button' onClick={() => {
+                  handleIdeaDelete(idea.id)
+                  history.push('/accounthome')
+                }}>Delete</button>
               </div>
-              </div>
-            <h3>Comments</h3>
+            </div>
+            <div className='comments-container'>
+              <h3 className='comments-title'>Comments</h3>
 
-            {comments && comments.filter(comment => comment.idea_id === idea.id).map((comment) =>
-              <div className='comment-body-button-container'>
-              <p key={comment.id}>{comment.body}<button className='comment-delete-button' onClick={() => {
-                handleCommentDelete(idea.id, comment.id)
-                history.push(`/accounthome`)
-                }}>Delete</button></p>
+              {comments && comments.filter(comment => comment.idea_id === idea.id).map((comment) =>
+                <div className='comment-body-button-container'>
+                  <p key={comment.id}>{comment.body}</p> <button className='comment-delete-button' onClick={() => {
+                    handleCommentDelete(idea.id, comment.id)
+                    history.push(`/accounthome`)
+                  }}>X</button>
                 </div>
-            )}
-
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                handleCommentCreate(this.state.idea_id, { body: this.state.body })
-                history.push(`/accounthome`)
-              }}
+              )}
+            </div>
+           
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleCommentCreate(this.state.idea_id, { body: this.state.body })
+                  history.push(`/accounthome`)
+                }}
 
             >
-              <label>
-                <input
-                  type='text'
-                  name='body'
-                  value={this.state.body}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <button>Add</button>
-            </form>
+               <div className='add-comment-form'>
+                <label>
+                  <textarea
+                    className='add-comment-field'
+                    type='text'
+                    name='body'
+                    value={this.state.body}
+                    onChange={this.handleChange}
+                    placeholder='enter comment'
+                  />
+                </label>
+              <button className='add-comment-submit-button'>Add</button>
+              </div>
+              </form>
+            
           </div>
+
         </>
       )}
 

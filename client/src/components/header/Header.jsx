@@ -11,7 +11,7 @@ export default function Header() {
       <div className='origio'><div>O</div><div>r</div><div>i</div>g<div>i</div><div>o</div></div>
       <div className='origio'><div>O</div><div>r</div><div>i</div>g<div>i</div><div>o</div></div>
       <div className='origio'><div>O</div><div>r</div><div>i</div>g<div>i</div><div>o</div></div>
-      <div>O</div>
+      <div className='origio'><div>O</div><div>r</div><div>i</div>g<div>i</div><div>o</div></div>
     </div>
     
   )
