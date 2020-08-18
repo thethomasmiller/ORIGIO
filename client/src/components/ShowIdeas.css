@@ -1,6 +1,7 @@
 .show-ideas{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   
 }
 
@@ -9,12 +10,23 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  font-size: 64px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
  
+}
+
+.idea-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
 }
 
 .idea-gallery {
   display: flex;
   justify-content: space-evenly;
+  text-transform: uppercase;
 
 }
 
@@ -28,4 +40,11 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  height: 45px;
+  width: 127px;
+  background: #FDD33E;
+  border: none;
+  text-transform: uppercase;
+  font-size: 18px;
+
 }

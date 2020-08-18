@@ -4,15 +4,15 @@ import './Header.css'
 
 export default function Header() {
   return (
-    <Link to= '/home' style={{textDecoration: 'none', color: 'black'}}>
+    
       <div className="header">
-      <div>Origio</div>
-      <div>Origio</div>
-      <div>Origio</div>
-      <div>Origio</div>
-      <div>Origio</div>
-      <div>O</div>
+      <div className='origio'><div>O</div><div>r</div><div>i</div>g<div>i</div><div>o</div></div>
+      <div className='origio'><div>O</div><div>r</div><div>i</div>g<div>i</div><div>o</div></div>
+      <div className='origio'><div>O</div><div>r</div><div>i</div>g<div>i</div><div>o</div></div>
+      <div className='origio'><div>O</div><div>r</div><div>i</div>g<div>i</div><div>o</div></div>
+      <div className='origio'><div>O</div><div>r</div><div>i</div>g<div>i</div><div>o</div></div>
+      <div className='origio'><div>O</div><div>r</div><div>i</div>g<div>i</div><div>o</div></div>
     </div>
-    </Link> 
+    
   )
 }

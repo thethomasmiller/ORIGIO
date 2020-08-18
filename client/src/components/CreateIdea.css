@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.create-idea-form{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 0 auto;
+
+}
+
+.create-idea-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 96px;
+  margin: auto;
+  text-transform: uppercase;
+  margin-top:25px;  
+  
+
+}
+
+.create-idea-input-fields{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
+}
+.title-date-fields,
+.notes-field{
+  display: flex;
+}
+
+.new-idea-notes{
+  width:520px;
+  height: 100px;
+  overflow-wrap: break-word;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  border: none;
+}
+
+.new-idea-image-url{
+  width: 520px;
+  height: 25px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border:none;
+}
+
+.new-idea-title,
+.new-idea-date
+{
+  width: 259px;
+  height: 47px;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+
+}
+
+
+
+.create-idea-submit-button{
+  appearance: none;
+  width: 130px;
+  height: 50px;
+  background: #C4C4C4;
+  border: none;
+  font-size: 18px;
+  text-transform: uppercase;
+
+}

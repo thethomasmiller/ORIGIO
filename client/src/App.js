@@ -4,6 +4,7 @@ import Header from './components/header/Header'
 import Main from './components/main/Main'
 import UserHeader from './components/UserHeader'
 import { withRouter} from 'react-router-dom'
+import './App.css'
 
 class App extends Component {
 
@@ -31,7 +32,7 @@ class App extends Component {
     })
     localStorage.removeItem('authToken')
     removeToken();
-    this.props.history.push('/home')
+    this.props.history.push('/')
   }
 
   handleVerify = async () => {
@@ -41,7 +42,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='App'>
         <Header/>
         <UserHeader
           currentUser={this.state.currentUser}

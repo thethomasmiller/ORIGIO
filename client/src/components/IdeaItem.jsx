@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 import { getOneIdea } from '../services/ideas'
-import { withRouter, Link, Redirect } from 'react-router-dom'
-import ShowComments from './ShowComments'
+import { withRouter, Link } from 'react-router-dom'
 import { getAllComments } from '../services/comments'
-
+import './IdeaItem.css'
 
 
 class IdeaItem extends Component {
-  constructor(props) {
-    super(props)
-  }
+
   state = {
     idea: null,
     comments: null,
+    body: '',
+    idea_id: '',
+    user_id: '',
   }
 
   componentDidMount() {
@@ -22,7 +22,11 @@ class IdeaItem extends Component {
 
   fetchIdeaItem = async () => {
     const idea = await getOneIdea(this.props.id)
-    this.setState({ idea })
+    this.setState({
+      idea: idea,
+      idea_id: idea.id,
+      user_id: idea.user_id
+    })
   }
 
   fetchComments = async () => {
@@ -30,33 +34,90 @@ class IdeaItem extends Component {
     this.setState({ comments })
   }
 
+  handleChange = (e) => {
+    const { value } = e.target;
+    this.setState({
+      body: value
+    })
+  }
+
+
   render() {
     const { idea, comments } = this.state
-    const { handleIdeaDelete, history } = this.props
+    const { handleIdeaDelete, history, handleCommentCreate, handleCommentDelete } = this.props
+
     return (<>
-      <div>
-        {idea && (
-          <>
-            <h3>{idea.title}</h3>
-            <h4>{idea.date}</h4>
-            <h4>{idea.notes}</h4>
-            <Link to={`/ideas/${idea.id}/edit`}><button>Edit</button></Link>
 
-            <button onClick={() => {
-              handleIdeaDelete(idea.id)
-              history.push('/accounthome')
-            }}>Delete</button>
+      {idea && (
+        <>
+          <div className='idea-item-container'>
+            <div className='image-info-button-container'>
+              <div className='idea-item-title'>
+                <p>{idea.title}</p>
+              </div>
+              <div className='image-info-container'>
+                <div className='idea-item-image-container'>
+                  <img src={idea.img_url} className='idea-item-image' />
+                </div>
 
-            <h3>Comments</h3>
-            {comments.filter(comment => comment.idea_id === idea.id).map((comment) =>
-              <p key={comment.id}>{comment.body}</p>
-            )}
+                <div className='idea-item-info-container'>
 
-          </>
-        )}
+                  <p>{idea.date}</p>
+                  <p>{idea.notes}</p>
+                </div>
+              </div>
+              <div className='idea-item-button-container'>
+                <Link to={`/ideas/${idea.id}/edit`}><button className='idea-edit-button'>Change</button></Link>
+
+                <button className='idea-delete-button' onClick={() => {
+                  handleIdeaDelete(idea.id)
+                  history.push('/accounthome')
+                }}>Delete</button>
+              </div>
+            </div>
+            <div className='comments-container'>
+              <h3 className='comments-title'>Comments</h3>
+
+              {comments && comments.filter(comment => comment.idea_id === idea.id).map((comment) =>
+                <div className='comment-body-button-container'>
+                  <p key={comment.id}>{comment.body}</p> <button className='comment-delete-button' onClick={() => {
+                    handleCommentDelete(idea.id, comment.id)
+                    history.push(`/accounthome`)
+                  }}>X</button>
+                </div>
+              )}
+            </div>
+           
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleCommentCreate(this.state.idea_id, { body: this.state.body })
+                  history.push(`/accounthome`)
+                }}
+
+            >
+               <div className='add-comment-form'>
+                <label>
+                  <textarea
+                    className='add-comment-field'
+                    type='text'
+                    name='body'
+                    value={this.state.body}
+                    onChange={this.handleChange}
+                    placeholder='enter comment'
+                  />
+                </label>
+              <button className='add-comment-submit-button'>Add</button>
+              </div>
+              </form>
+            
+          </div>
+
+        </>
+      )}
 
 
-      </div>
+
     </>)
   }
 }

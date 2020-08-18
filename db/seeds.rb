@@ -10,7 +10,7 @@ Comment.destroy_all
 Idea.destroy_all
 User.destroy_all
 
-@admin = User.create!(name: 'Thomas', username: 'admin', email: 'admin@email.com', password: '123456')
+@admin = User.create!(name: 'Thomas', username: 'admin', email: 'admin@email.com', password: '123456', img_url: 'https://i.imgur.com/8UxY9jRl.png')
 puts "#{User.count} users created"
 
 @new_idea = Idea.create!(
