@@ -43,7 +43,6 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Header/>
         <UserHeader
           currentUser={this.state.currentUser}
           handleLogout={this.handleLogout} />

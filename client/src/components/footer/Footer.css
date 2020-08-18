@@ -21,6 +21,8 @@
  position: fixed;
  height: 225px;
  font-size: 36px;
+ left: none;
+ bottom: none;
 }
 
 .about{
