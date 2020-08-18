@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Header from './header/Header'
 import Footer from './footer/Footer'
+import './Login.css'
 
 export default class Login extends Component {
   state = {
@@ -23,34 +23,44 @@ export default class Login extends Component {
 
     return (
       <>
-        <form onSubmit={(e) => {
+        <form
+          className='login-form'
+          onSubmit={(e) => {
           e.preventDefault();
           handleLogin(this.state)
           history.push('/accounthome')
         }}>
-          <h3>Login</h3>
-          <label>
-            Username:
-            <input
+          <h3 className='login-title'>
+            Login
+            </h3>
+          <div className ='login-input-fields'>
+          <label >
+              <input
+              className='login-username-field'
               type='text'
               name='username'
               value={username}
               onChange={this.handleChange}
+              placeholder='ENTER USERNAME'
             />
           </label>
-          <label>
-            Password:
-          <input
+          <label >
+              <input
+              className = 'login-password-field'
               type='password'
               name='password'
               value={password}
               onChange={this.handleChange}
+              placeholder='ENTER PASSWORD'
             />
-          </label>
-          <button>Submit</button>
-          <Link to= '/register'>make an account</Link>
+            </label>
+           
+          <button className='login-submit-button'>SUBMIT</button>
+            <Link to='/register' style={{textDecoration:'none', color:'black'}}>make an account</Link>
+            </div>
         </form>
         <Footer />
-      </>)
+      </>
+    )
   }
 }

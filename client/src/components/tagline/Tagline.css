@@ -1,6 +1,8 @@
 .tagline{
   display: flex;
-
+  justify-content: center;
+  margin: 0 auto;
+  width: 1200px;
 }
 .vertical-text{
   display: flex;
@@ -10,20 +12,138 @@
   text-transform: uppercase;
   height: 500px;
   margin: auto;
+  margin-top:15px;
 }
 
-.makers-button{
+.makers-button-container{
   display:flex;
+  flex-direction: column;
+  margin-top:30px;
+  margin: auto;
+}
+
+.makers-title{
+  font-size: 150px;
+  text-transform: uppercase;
+}
+
+.makers-text{
+  border-bottom: 20px solid black;
+  color: black;
+  padding-bottom: .25em;
+  text-decoration: none;
+
+}
+
+
+.makers-text:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='pink' stroke-width='1' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 20%;
+  border-bottom: 0;
+  padding-bottom: .3em;
+  text-decoration: none;
+}
+
+
+.makers-buttons{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: 0 200px;
+
+}
+
+.start-making-button,
+.keep-making-button{
+  font-size:18px;
+  width: 160px;
+  height: 60px;
+  background: #CECBCB;
+  border: none;
+  border-radius: 50px;
+  margin-left: -200px;
+  text-transform: uppercase;
+}
+
+.start-making-button:hover,
+.keep-making-button:hover{
+  background-image: url('https://media.giphy.com/media/YiukuW579wzmM/giphy.gif');
+  color: white;
+}
+
+
+@media only screen and (max-width: 375px) {
+
+  .tagline{
+    flex-direction: column;
+    width:375px;
+    font-size: 12px;
   
+  
+  }
+
+  .vertical-text{
+    flex-direction:row;
+    height: 30px;
+    margin-top: 25px;
+
+  }
+.space,
+.for {
+  display: flex;
+  margin-left: 10px;
+
+}
+.makers-button-container{
+  margin-top:30px;
+  margin: 0;
+  align-items: center;
+  
+
+}
+.makers-title{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+}
+
+
+.makers-title,
+.makers-text{
+  font-size:72px;
+  width:375px;
+  border-bottom: none;
+  text-decoration: none;
+  margin: 0;
+  margin-left: 25px;
+  padding: 0;
+
 }
 
 .makers-buttons{
   display: flex;
   flex-direction: column;
-
+  justify-content: space-evenly;
+  align-items: center;
+  width: 375px;
+  height: 150px;
 }
-.makers{
-  font-size: 250px;
+
+.start-making-button,
+.keep-making-button{
+  font-size:18px;
+  width: 160px;
+  height: 60px;
+  background: #CECBCB;
+  border: none;
+  border-radius: 50px;
+  margin-left: 0px;
   text-transform: uppercase;
-  margin: auto;
+}
+
+
+
 }

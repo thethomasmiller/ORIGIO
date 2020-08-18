@@ -1,0 +1,46 @@
+.userheader{
+
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top:50px;
+  margin-bottom:15px;
+  width: 700px;
+}
+
+.image-greeting{
+  display: flex;
+  align-items: center;
+}
+
+.userheader-greeting{
+  font-size: 42px;
+  margin-left:10px;
+}
+
+.user-image{
+  border-radius:50%;
+  border: none;
+  height:60px;
+  width: 60px;
+}
+
+.userheader-buttons-container{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 700px;
+}
+
+
+.logout-button,
+.accounthome-button {
+  width: 127px;
+  height: 45px;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #FDD33E;
+  border: none;
+
+}
+
