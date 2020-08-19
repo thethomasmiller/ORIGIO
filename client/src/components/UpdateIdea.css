@@ -77,3 +77,9 @@ border: .5px solid black
 .update-submit-button:hover {
 background:#FDD33E;
 }
+
+@media only screen and (max-width: 400px){
+
+  
+
+}

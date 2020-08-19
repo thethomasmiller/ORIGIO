@@ -32,7 +32,7 @@
   width: 700px;
 }
 
-
+.create-idea-button,
 .logout-button,
 .accounthome-button {
   width: 127px;
@@ -44,4 +44,42 @@
 
 }
 
+@media only screen and (max-width: 400px){
 
+  .userheader-buttons-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    width: 90%;
+  }
+  .userheader{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom:15px;
+    width: 100%;
+  }
+
+  .create-idea-button,
+  .logout-button,
+  .accounthome-button {
+    width: 90px;
+    height: 45px;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: #FDD33E;
+    border: none;
+  
+  }
+
+
+
+
+
+
+}

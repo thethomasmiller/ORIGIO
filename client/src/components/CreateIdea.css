@@ -73,3 +73,35 @@ margin: 0 auto;
   text-transform: uppercase;
 
 }
+
+
+@media only screen and (max-width: 400px){
+
+.create-idea-title{
+font-size: 45px;
+}
+
+.create-idea-submit-button{
+  width: 100px;
+ 
+}
+
+.new-idea-title,
+.new-idea-date
+{
+  width: 150px;
+}
+.new-idea-image-url{
+  width: 350px;
+}
+
+.new-idea-image-url::placeholder,
+.new-idea-notes::placeholder{
+  text-align: center;
+}
+
+.new-idea-notes{
+  width: 350px;
+}
+
+}

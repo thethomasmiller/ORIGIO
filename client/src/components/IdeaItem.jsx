@@ -107,7 +107,7 @@ class IdeaItem extends Component {
                     placeholder='enter comment'
                   />
                 </label>
-              <button className='add-comment-submit-button'>Add</button>
+              <button className='add-comment-submit-button'>+</button>
               </div>
               </form>
             

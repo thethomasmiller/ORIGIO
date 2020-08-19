@@ -47,6 +47,7 @@ margin: auto;
 
 .image-info-button-container{
   display: flex;
+ 
   flex-direction: column;
   margin-top: 10px;
 
@@ -116,3 +117,38 @@ font-family: 'Roboto', sans-serif;
 }
 
 textarea,button:focus {outline: none;}
+
+
+@media only screen and (max-width: 375px){
+
+  .idea-item-title{
+    align-items: center;
+    font-size:50px;
+    text-transform: uppercase;
+    margin-top:-50px;
+    margin-bottom: -50px;
+    
+  }
+
+  .idea-item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-info-container{
+    display: flex;
+    width: 90%;
+
+  }
+
+  .image-info-button-container{
+    align-items: center;
+  }
+
+
+  .add-comment-field{
+    width: 100%;
+  }
+
+}

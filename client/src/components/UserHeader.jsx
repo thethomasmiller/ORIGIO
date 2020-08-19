@@ -20,7 +20,7 @@ export default function UserHeader(props) {
               <button className='accounthome-button'>ALL IDEAS</button>
             </Link>
             <Link to="/ideas/new" style={{ textDecoration: 'none' }} >
-              <button className='create-button' >New Idea</button>
+              <button className='create-idea-button' >New Idea</button>
             </Link>
             <button onClick={handleLogout} className='logout-button'>Logout</button>
           </div>
