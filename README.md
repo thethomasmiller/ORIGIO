@@ -11,7 +11,7 @@
 <br>
 
 ## MVP
-The **ORIGIO** MVP will allow users to create an account, see all ideas, add a new idea, update an idea, and delete an idea. They can also add/delete collaborators on an an idea. 
+The **ORIGIO** MVP will allow users to create an account, see all ideas, add a new idea, update an idea, and delete an idea. They can also add/delete comments on an an idea. 
 
 <br>
 
