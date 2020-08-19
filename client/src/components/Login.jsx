@@ -60,7 +60,7 @@ export default class Login extends Component {
             <Link to='/register' style={{textDecoration:'none', color:'black'}}>make an account</Link>
             </div>
         </form>
-        <Footer />
+        
       </>
     )
   }

@@ -7,7 +7,6 @@ export default function Landing() {
   return (
     <div classname='landing-page'>
       <Tagline />
-      <Footer />
     </div>
   )
 }
