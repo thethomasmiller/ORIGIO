@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { getOneIdea } from '../services/ideas'
+import { getOneIdea } from '../../services/ideas'
 import { withRouter, Link } from 'react-router-dom'
-import { getAllComments } from '../services/comments'
+import { getAllComments } from '../../services/comments'
 import './IdeaItem.css'
 
 

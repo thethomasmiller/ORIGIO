@@ -115,6 +115,7 @@ font-family: 'Roboto', sans-serif;
 
 textarea,button:focus {outline: none;}
 
+/* Media Queries */
 
 @media only screen and (max-width: 375px){
 

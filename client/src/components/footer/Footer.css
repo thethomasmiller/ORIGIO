@@ -20,6 +20,9 @@
  display: flex;
 }
 
+
+/* Media Queries */
+
 @media only screen and (max-width: 800px){
    
 .footer{

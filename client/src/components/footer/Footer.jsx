@@ -9,7 +9,6 @@ export default function Footer() {
       <div className='about'><div>a</div><div>b</div><div>o</div><div>u</div><div>t</div></div>
       <div className='about'><div>a</div><div>b</div><div>o</div><div>u</div><div>t</div></div>
       <div className='about'><div>a</div><div>b</div><div>o</div><div>u</div><div>t</div></div>
-      
     </div>
   )
 }
