@@ -4,8 +4,13 @@ import './MiniHeader.css'
 
 export default function MiniHeader() {
   return (
-    <div>
-      <div className='mini-origio'><div>Ori</div><div>gio</div></div>
+    <div className='mini-header'>
+      <div className='mini-origio'><div>ori</div><div>gio</div></div>
+      <div className='mini-origio'><div>ori</div><div>gio</div></div>
+      <div className='mini-origio'><div>ori</div><div>gio</div></div>
+      <div className='mini-origio'><div>ori</div><div>gio</div></div>
+      <div className='mini-origio'><div>ori</div><div>gio</div></div>
+      <div className='mini-origio'><div>ori</div><div>gio</div></div>
     </div>
   )
 }

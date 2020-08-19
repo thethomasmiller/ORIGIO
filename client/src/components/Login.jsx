@@ -24,7 +24,6 @@ export default class Login extends Component {
 
     return (
       <>
-         <Header/>
         <form
           className='login-form'
           onSubmit={(e) => {
