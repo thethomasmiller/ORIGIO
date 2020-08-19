@@ -3,6 +3,7 @@ import { loginUser, registerUser, removeToken, verifyUser } from './services/aut
 import Header from './components/header/Header'
 import Main from './components/main/Main'
 import UserHeader from './components/UserHeader'
+import Footer from './components/footer/Footer'
 import { withRouter} from 'react-router-dom'
 import './App.css'
 
@@ -52,6 +53,7 @@ class App extends Component {
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}
         />
+        <Footer/>
       </div>
     )
   }

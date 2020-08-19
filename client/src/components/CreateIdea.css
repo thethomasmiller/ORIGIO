@@ -99,9 +99,8 @@ font-size: 45px;
 .new-idea-notes::placeholder{
   text-align: center;
 }
-
 .new-idea-notes{
-  width: 350px;
+  width: 300px;
 }
 
 }
