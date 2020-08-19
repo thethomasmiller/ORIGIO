@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Footer from './footer/Footer'
 import './Register.css'
 
 export default class Register extends Component {
@@ -82,7 +81,7 @@ export default class Register extends Component {
             <Link to='/login' style={{textDecoration:'none', color: 'black'}}>already making? Login</Link>
           </div>
         </form>
-        <Footer />
+        
       </>
     )
   }

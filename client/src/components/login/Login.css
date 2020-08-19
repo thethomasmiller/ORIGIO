@@ -37,6 +37,9 @@
   text-transform: uppercase;
 }
 
+
+/* Media Queries */
+
 @media only screen and (max-width: 375px){
 .login-title{
   font-size:96px;

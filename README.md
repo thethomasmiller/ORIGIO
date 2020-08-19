@@ -4,14 +4,14 @@
 
 ## Overview
 
-**ORIGIO** is a space for makers. Users can create an account and build a collection of ideas. They can edit the titles, dates, and notes for these ideas, as well as add and delete collaborators. 
+**ORIGIO** is a space for makers. Users can create an account and build a collection of ideas. They can edit the titles, dates, and notes for these ideas, as well as add and delete comments. 
 
-[ORIGIO](http://origio.surge.sh/home)
+[ORIGIO](http://origio.surge.sh/)
 
 <br>
 
 ## MVP
-The **ORIGIO** MVP will allow users to create an account, see all ideas, add a new idea, update an idea, and delete an idea. They can also add/delete collaborators on an an idea. 
+The **ORIGIO** MVP will allow users to create an account, see all ideas, add a new idea, update an idea, and delete an idea. They can also add/delete comments on an an idea. 
 
 <br>
 
@@ -113,14 +113,14 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Authorization    |    M     |     5 hrs      |     X hrs     |    X hrs    |
-| Build Front End |    H     |     7 hrs      |     X hrs     |     X hrs     |
-| Ideas |    H     |     5 hrs      |     X hrs     |     X hrs     |
-| Collaborators |    H     |     5 hrs      |     X hrs     |     X hrs     |
-| Build Backend |    H     |     5 hrs      |     X hrs     |     X hrs     |
-| Styling/Media Queries |    H     |     8 hrs      |     X hrs     |     X hrs     |
-| Post MVP |    H     |     5 hrs      |     X hrs     |     X hrs     |
-| TOTAL    |          |     40 hrs      |     X hrs     |     X hrs     |
+| Authorization    |    M     |     5 hrs      |     3 hrs     |    3 hrs    |
+| Build Front End |    H     |     7 hrs      |     24 hrs     |     24 hrs     |
+| Ideas |    H     |     5 hrs      |     2 hrs     |     2 hrs     |
+| Comments |    H     |     5 hrs      |     8 hrs     |     8 hrs     |
+| Build Backend |    H     |     5 hrs      |     5 hrs     |     5 hrs     |
+| Styling/Media Queries |    H     |     8 hrs      |     16 hrs     |     16 hrs     |
+| Post MVP |    H     |     5 hrs      |     5 hrs     |     5 hrs     |
+| TOTAL    |          |     40 hrs      |     63 hrs     |    63 hrs     |
 
 <br>
 
@@ -146,9 +146,18 @@ src
 
 ## Code Showcase
 
-> TBD
+>  {comments && comments.filter(comment => comment.idea_id === idea.id).map((comment) =>
+      <div className='comment-body-button-container'>
+      <p key={comment.id} >{comment.body}</p>
+      <button className='comment-delete-button' onClick={() => {
+            handleCommentDelete(idea.id, comment.id)
+            history.push(`/accounthome`)}}>
+            X</button>
+
+- These 6 lines of code really solidified my understanding of table relationships and control flow through the hierarchy of my project. As I wrote this and tracked the flow of information back to its source, Unit 4 suddenly sank in, and I feel inspired to pursue more complex backend structures in Post-MVP.
+
 
 ## Code Issues & Resolutions
 
-> TBD
+> See Issues
 

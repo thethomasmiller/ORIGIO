@@ -5,9 +5,6 @@
   text-transform: uppercase;
   margin-top: 15px;
   animation: myheadermove 5s;
-  
-  
-  
 }
 
 @keyframes myheadermove {
@@ -24,9 +21,11 @@
 
 .origio{
   display: flex;
-
 }
 
+
+
+/* Media Queries */
 
 @media only screen and (max-width: 800px){
 .origio{

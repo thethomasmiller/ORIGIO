@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 
-import Login from '../Login'
-import Register from '../Register'
+import Login from '../login/Login'
+import Register from '../register/Register'
 import { getAllIdeas, createIdea, updateIdea, deleteIdea } from '../../services/ideas'
 import {getAllComments, addComment, deleteComment} from '../../services/comments'
-import ShowIdeas from '../ShowIdeas'
-import IdeaItem from '../IdeaItem'
+import ShowIdeas from '../showideas/ShowIdeas'
+import IdeaItem from '../ideaitem/IdeaItem'
 import Landing from '../Landing'
-import CreateIdea from '../CreateIdea'
-import UpdateIdea from '../UpdateIdea'
+import CreateIdea from '../createidea/CreateIdea'
+import UpdateIdea from '../updateidea/UpdateIdea'
 
 
 
