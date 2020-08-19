@@ -6,7 +6,7 @@
 
 **ORIGIO** is a space for makers. Users can create an account and build a collection of ideas. They can edit the titles, dates, and notes for these ideas, as well as add and delete collaborators. 
 
-[ORIGIO](http://origio.surge.sh/home)
+[ORIGIO](http://origio.surge.sh/)
 
 <br>
 
