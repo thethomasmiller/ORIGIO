@@ -4,7 +4,7 @@
 
 ## Overview
 
-**ORIGIO** is a space for makers. Users can create an account and build a collection of ideas. They can edit the titles, dates, and notes for these ideas, as well as add and delete collaborators. 
+**ORIGIO** is a space for makers. Users can create an account and build a collection of ideas. They can edit the titles, dates, and notes for these ideas, as well as add and delete comments. 
 
 [ORIGIO](http://origio.surge.sh/)
 
