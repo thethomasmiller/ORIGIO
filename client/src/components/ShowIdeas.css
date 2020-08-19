@@ -48,3 +48,21 @@
   font-size: 18px;
 
 }
+
+@media only screen and (max-width: 375px){
+
+.idea-gallery{
+  flex-direction: column;
+
+}
+
+.img{
+  height: 250px;
+  width: 250px;
+}
+
+.idea-title-under-image{
+  font-size: 25px;
+}
+
+}

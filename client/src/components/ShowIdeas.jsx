@@ -14,7 +14,7 @@ export default function ShowIdeas(props) {
         <React.Fragment key={idea.id} >
           <Link to={`/ideas/${idea.id}`} style={{textDecoration:'none'}} className='idea-item'>
             <img alt='idea' src={idea.img_url} className = 'img'/>
-            <p>{idea.title}</p>
+            <p className='idea-title-under-image'>{idea.title}</p>
           </Link>
        </React.Fragment>
       ))} </div>

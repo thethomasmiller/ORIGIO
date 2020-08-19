@@ -44,7 +44,7 @@ class IdeaItem extends Component {
 
   render() {
     const { idea, comments } = this.state
-    const { handleIdeaDelete, history, handleCommentCreate, handleCommentDelete } = this.props
+    const { handleIdeaDelete, history, handleCommentCreate, handleCommentDelete, currentUser } = this.props
 
     return (<>
 
@@ -80,7 +80,7 @@ class IdeaItem extends Component {
 
               {comments && comments.filter(comment => comment.idea_id === idea.id).map((comment) =>
                 <div className='comment-body-button-container'>
-                  <p key={comment.id}>{comment.body}</p> <button className='comment-delete-button' onClick={() => {
+                  <p key={comment.id} >{comment.body}</p><button className='comment-delete-button' onClick={() => {
                     handleCommentDelete(idea.id, comment.id)
                     history.push(`/accounthome`)
                   }}>X</button>
@@ -107,7 +107,7 @@ class IdeaItem extends Component {
                     placeholder='enter comment'
                   />
                 </label>
-              <button className='add-comment-submit-button'>Add</button>
+              <button className='add-comment-submit-button'>+</button>
               </div>
               </form>
             

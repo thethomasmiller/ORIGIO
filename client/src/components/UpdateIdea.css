@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.update-idea-title{
 
-}
 
 .update-idea-input-fields{
 display: flex;
@@ -11,9 +9,7 @@ align-items: center;
 
 }
 
-.update-title{
 
-}
 
 .update-title-field{
 height: 86px ;
@@ -25,9 +21,7 @@ border-right: none;
 border-bottom: .5px solid black;
 }
 
-.update-date{
 
-}
 .update-date-field{
   border-top: none;
   border-left: none;
@@ -40,9 +34,6 @@ border-bottom: .5px solid black;
 
 }
 
-.update-notes{
-
-}
 
 .update-notes-field{
   border: .5px solid black;
@@ -52,9 +43,6 @@ border-bottom: .5px solid black;
   margin-top: 15px;
 }
 
-.update-image{
-
-}
 
 .update-image-field{
   border-top: none;
@@ -76,4 +64,31 @@ border: .5px solid black
 
 .update-submit-button:hover {
 background:#FDD33E;
+}
+
+@media only screen and (max-width: 400px){
+
+  .update-title-field{
+    height: 50px ;
+    width: 350px;
+    padding-top: 10px;
+    font-size: 50px;
+    text-align: center;
+    }
+
+.update-date-field,
+.update-notes-field,
+.update-image-field{
+
+  width: 350px;
+  text-align: center ;
+
+}
+
+.update-submit-button{
+  margin-bottom: 25px ;
+}
+
+
+
 }
